@@ -1,31 +1,71 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="topbar.css">
-    </head>
-<body>
-<header class="topbar">
-    <div class="topbar container">
-        <div class="col-left">
-            <p><i class="fa fa-clock"></i>Ordered before 17:30, shipped today - Support: (012) 800 456 789</p>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="topbar.css">
+    <title>Top Bar Component</title>
 
-        <div class="right-col">
-            
-            <ul>
-                <li>English</li>
-              <!--dropdown-->
-            
-                <li>Currency:USD <i class="fa fa-chevron-down"></i></li>
-            
-                <li>My Account<i class="fa fa-chevron-down"></i></li>
-            </ul>
+    <!-- Font Awesome for icons (you can replace with your preferred icon library) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=alarm" />
+</head>
+<body>
+    <!-- Top Bar Component -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <!-- Left Column -->
+            <div class="top-bar-left">
+                <p>
+                <span class="material-symbols-outlined">
+alarm
+</span>Ordered before 17:30, shipped today - Support: (012) 800 456 789</p>
+            </div>
+
+            <!-- Right Column -->
+            <div class="top-bar-right">
+                <!-- Language Dropdown -->
+                <div class="dropdown" id="languageDropdown">
+                    <a class="dropdown-toggle">
+                        Language: English <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">English</a>
+                        <a href="#" class="dropdown-item">French</a>
+                        <a href="#" class="dropdown-item">German</a>
+                        <a href="#" class="dropdown-item">Spanish</a>
+                    </div>
+                </div>
+
+                <!-- Currency Dropdown -->
+                <div class="dropdown" id="currencyDropdown">
+                    <a class="dropdown-toggle">
+                        Currency: $USD <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">$ USD</a>
+                        <a href="#" class="dropdown-item">€ EUR</a>
+                        <a href="#" class="dropdown-item">£ GBP</a>
+                        <a href="#" class="dropdown-item">¥ JPY</a>
+                    </div>
+                </div>
+
+                <!-- Account Dropdown -->
+                <div class="dropdown" id="accountDropdown">
+                    <a class="dropdown-toggle">
+                        My Account <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Cart</a>
+                        <a href="#" class="dropdown-item">Checkout</a>
+                        <a href="#" class="dropdown-item">My Account</a>
+                        <a href="#" class="dropdown-item">Login</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    
-  
-</header>
-<style>
 
-</style>
+    <script src="topbar.js"></script>
 </body>
 </html>

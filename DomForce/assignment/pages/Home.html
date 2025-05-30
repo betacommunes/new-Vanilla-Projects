@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Home.css">
+  <link rel="stylesheet" href="components\navbar\navbar.css">
+  <title>Hero Image Slider</title>
+
+</head>
+<body>
+ 
+
+    <!--navbar component render-->
+  
+<!-- Hero Section -->
+<section class="hero-section">
+  <button class="slider-arrow slider-arrow--left" onclick="prevSlide()">&#10094;</button>
+
+  <div class="slider-content" id="slider-content">
+    <h1>Welcome</h1>
+    <p class="slider-offer">This is the first slide with a beautiful hero image.</p>
+    <p class="slider-price">Starting at <span class="price-value">$260.99</span></p>
+    <button class="slider-btn">Hello</button>
+  </div>
+
+  <div class="slider-image-wrapper">
+    <img id="slider-image" src="https://htmldemo.net/furnilife/furnilife/assets/images/sliders/01.webp" alt="Slide Image">
+  </div>
+
+  <button class="slider-arrow slider-arrow--right" onclick="nextSlide()">&#10095;</button>
+</section>
+
+<!-- Banner Section -->
+<section class="banner-section container">
+  <div class="banner-card">
+    <img src="https://htmldemo.net/furnilife/furnilife/assets/images/banners/banner1.webp" alt="Banner 1">
+    <div class="banner-card__content">
+      <h5>Design Creative</h5>
+      <h3>Modern and Clean</h3>
+      <p>From $60.99 - Sale 20%</p>
+    </div>
+  </div>
+
+  <div class="banner-card">
+    <img src="https://htmldemo.net/furnilife/furnilife/assets/images/banners/banner2.webp" alt="Banner 2">
+    <div class="banner-card__content">
+      <h5>Bestselling Products</h5>
+      <h3>Ceiling Light Modern</h3>
+      <p>Only from $79.00</p>
+    </div>
+  </div>
+
+  <div class="banner-card">
+    <img src="https://htmldemo.net/furnilife/furnilife/assets/images/banners/banner3.webp" alt="Banner 3">
+    <div class="banner-card__content">
+      <h5>Onsale Products</h5>
+      <h3>Drop Chair - Quickship</h3>
+      <p>Selling Off 30%</p>
+    </div>
+  </div>
+</section>
+
+<!-- Modified Image Slider Section -->
+<section class="image-slider-section container">
+  <div class="image-slider-header">
+    <div class="slider-tabs">
+      <div class="slider-tab active">FEATURED PRODUCTS</div>
+      <div class="slider-tab">NEW PRODUCTS</div>
+      <div class="slider-tab">ONSALE PRODUCTS</div>
+    </div>
+  </div>
+
+  <div class="scrollable-slider-container">
+    <button class="slider-nav-btn slider-nav-left" onclick="scrollSlider(-1)">&#10094;</button>
+    <div class="scrollable-slider" id="scrollable-slider">
+      
+        <div class="slider-item">
+            <img src="https://htmldemo.net/furnilife/furnilife/assets/images/products/product01-2.webp" alt="Product 1">
+       <div class="text" style="text-align: center;">
+<h4>Table</h4>
+        <p>furniture</p>
+
+       </div>
+    </div>
+      <div class="slider-item"><img src="https://htmldemo.net/furnilife/furnilife/assets/images/products/product01-2.webp" alt="Product 2"></div>
+      <div class="slider-item"><img src="https://htmldemo.net/furnilife/furnilife/assets/images/products/product02-2.webp   " alt="Product 3"></div>
+      <div class="slider-item"><img src="https://htmldemo.net/furnilife/furnilife/assets/images/products/product04-2.webp" alt="Product 4"></div>
+      <div class="slider-item"><img src="https://htmldemo.net/furnilife/furnilife/assets/images/products/product05-2.webp" alt="Product 5"></div>
+      <div class="slider-item"><img src="https://htmldemo.net/furnilife/furnilife/assets/images/products/product06-2.webp" alt="Product 6"></div>
+      <div class="slider-item"><img src="https://htmldemo.net/furnilife/furnilife/assets/images/products/product01-2.webp" alt="Product 7"></div>
+      <div class="slider-item"><img src="https://via.placeholder.com/200x200/9acf6a/ffffff?text=Product+8" alt="Product 8"></div>
+      <div class="slider-item"><img src="https://via.placeholder.com/200x200/6c757d/ffffff?text=Product+9" alt="Product 9"></div>
+      <div class="slider-item"><img src="https://via.placeholder.com/200x200/dc3545/ffffff?text=Product+10" alt="Product 10"></div>
+    </div>
+    <button class="slider-nav-btn slider-nav-right" onclick="scrollSlider(1)">&#10095;</button>
+  </div>
+</section>
+
+<!---second slider-->
+<section class="container__Slider">
+    <div class="container">
+        <div class="sidebar">
+            <h2>BEDROOM Furniture</h2>
+            <ul>
+                <li>Nightstands</li>
+                <li>Bedrooms</li>
+                <li>Headboards</li>
+                <li>Chest and Dressers</li>
+                <li>Bedroom sets</li>
+                <li>Mattretsser</li>
+                <li>Armories</li>
+                <li>Small  Beds</li>
+                <li>Larger Beds</li>
+            </ul>
+        </div>
+
+        <div class="slider-container">
+            <div class="slider-wrapper">
+                <div class="sliderTwo" id="sliderTwo">
+                    <div class="slide">
+                        <img src="https://htmldemo.net/furnilife/furnilife/assets/images/products/product01-2.webp" alt="Modern Nightstand">
+                    <div class="slide__body">
+                        <h6>Cullim dollore</h6>
+                    <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <div class="price_row">
+                        <h5><del>$71</del></h5>
+                        <h5>$65</h5>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://htmldemo.net/furnilife/furnilife/assets/images/products/product02-2.webp" alt="Bedroom Set">
+                           <div class="slide__body">
+                        <h6>Cullim dollore</h6>
+                    <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <div class="price_row">
+                        <h5><del>$71</del></h5>
+                        <h5>$65</h5>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://htmldemo.net/furnilife/furnilife/assets/images/products/product03-2.webp" alt="Upholstered Headboard">
+                           <div class="slide__body">
+                        <h6>Cullim dollore</h6>
+                    <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <div class="price_row">
+                        <h5><del>$71</del></h5>
+                        <h5>$65</h5>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://htmldemo.net/furnilife/furnilife/assets/images/products/product04-2.webp" alt="Wooden Dresser">
+                           <div class="slide__body">
+                        <h6>Cullim dollore</h6>
+                    <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <div class="price_row">
+                        <h5><del>$71</del></h5>
+                        <h5>$65</h5>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?w=400&h=400&fit=crop" alt="Single Bed">
+                           <div class="slide__body">
+                        <h6>Cullim dollore</h6>
+                    <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <div class="price_row">
+                        <h5><del>$71</del></h5>
+                        <h5>$65</h5>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1505693314120-0d443867891c?w=400&h=400&fit=crop" alt="King Size Bed">
+                           <div class="slide__body">
+                        <h6>Cullim dollore</h6>
+                    <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <div class="price_row">
+                        <h5><del>$71</del></h5>
+                        <h5>$65</h5>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=400&h=400&fit=crop" alt="Bedside Table">
+                           <div class="slide__body">
+                        <h6>Cullim dollore</h6>
+                    <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <div class="price_row">
+                        <h5><del>$71</del></h5>
+                        <h5>$65</h5>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&h=400&fit=crop" alt="Master Bedroom">
+                          <div class="slide__body">
+                        <h6>Cullim dollore</h6>
+                    <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                     <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <div class="price_row">
+                        <h5><del>$71</del></h5>
+                        <h5>$65</h5>
+                      </div>
+                      </div>
+                    </div>
+                  
+                </div>
+                
+                <button class="arrow left" onclick="slideLeft()">&#8249;</button>
+                <button class="arrow right" onclick="slideRight()">&#8250;</button>
+            </div>
+      <div  class="banner">
+        <div  class="banner__content">
+        <h5>Look of the week</h5>
+<h2>Wood Frame Bedroom</h2>
+<p>Only from $209</p>
+</div>
+      </div>
+        </div>
+    </div>
+
+</section>
+<section class="card__wrapper container">
+<div class="cards-row">
+  <!-- Card 1 -->
+  <div class="card">
+    <div class="card-top-bar">
+      <h4>Outdoor</h4>
+      <ul>
+        <li>Chairs</li>
+        <li>Tables</li>
+        <li>Sofas</li>
+      </ul>
+    </div>
+    <div class="card-body">
+      <div class="card-sidebar">
+    
+        <img src="https://htmldemo.net/furnilife/furnilife/assets/images/banners/banner7.webp" alt="Sidebar Image 1">
+      </div>
+      <div class="card-content">
+        <div class="card-row">
+          <img src="https://htmldemo.net/furnilife/furnilife/assets/images/products/tab-product01.webp" alt="Item 1">
+           <div class="card__Desc"><h6>Cillum dolore</h6>
+              <div class="icons__row">
+               <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        <div class="price_row">
+                            <h4><del>$71</del></h4>
+                            <h4>$65</h4>
+                            </div>
+                        </div>
+        </div>
+        <div class="card-row">
+          <img src="https://htmldemo.net/furnilife/furnilife/assets/images/products/tab-product01.webp" alt="Item 2">
+    <div class="card__Desc">
+        <h6>Cillum dolore</h6>
+        <div class="icons__row">
+               <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        <div class="price_row">
+                            <h4><del>$71</del></h4>
+                            <h4>$65</h4>
+                            </div>
+                        </div>
+        </div>
+        <div class="card-row">
+          <img src="https://htmldemo.net/furnilife/furnilife/assets/images/products/tab-product01.webp" alt="Item 3">
+          <div class="desc">Cillum dolore
+         <div class="icons__row">
+               <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        <div class="price_row">
+                            <h4><del>$71</del></h4>
+                            <h4>$65</h4>
+                            
+                        </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card">
+    <div class="card-top-bar">
+      <h4>Indoor</h4>
+      <ul>
+        <li>Beds</li>
+        <li>Wardrobes</li>
+        <li>Desks</li>
+      </ul>
+    </div>
+    <div class="card-body">
+      <div class="card-sidebar">
+      
+        <img src="https://htmldemo.net/furnilife/furnilife/assets/images/banners/banner8.webp" alt="Sidebar Image 2">
+      </div>
+      <div class="card-content">
+        <div class="card-row">
+          <img src="https://htmldemo.net/furnilife/furnilife/assets/images/products/tab-product01.webp" alt="Item 4">
+      <div class="desc">Cillum dolore
+            <div class="icons__row">
+               <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        <div class="price_row">
+                            <h4><del>$71</del></h4>
+                            <h4>$65</h4>
+                            
+                        </div>
+          </div>
+          </div>
+        <div class="card-row">
+          <img src="https://htmldemo.net/furnilife/furnilife/assets/images/products/tab-product01.webp" alt="Item 5">
+           <div class="card__Desc">Cillum dolore
+               <div class="icons__row">
+               <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        <div class="price_row">
+                            <h4><del>$71</del></h4>
+                            <h4>$65</h4>
+                            </div>
+                        </div>
+          </div>
+        <div class="card-row">
+          <img src="https://htmldemo.net/furnilife/furnilife/assets/images/products/tab-product01.webp" alt="Item 6">
+           <div class="desc">Cillum dolore
+          <div class="icons__row">
+               <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </div>
+                        <div class="price_row">
+                            <h4><del>$71</del></h4>
+                            <h4>$65</h4>
+                            
+                        </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<script>
+// Hero slider functionality
+const slides = [
+  {
+    text: `<p class="slider-offer">Exclusive offer -60% off this week</p>`,
+    heading: `<h1>Caronade<br> Pendant Lamp-Black</h1>`,
+    span: `<p class="slider-price">Starting at <span class="price-value">$260.99</span></p>`,
+    button: `<button class="slider-btn">Shop Now</button>`,
+    img: 'https://htmldemo.net/furnilife/furnilife/assets/images/sliders/01.webp'
+  },
+  {
+    text: `<p class="slider-offer">Exclusive offer -30% off this week</p>`,
+    heading: `<h1>Decorative <br> Outdoor Chair 2018</h1>`,
+    span: `<p class="slider-price">Starting at <span class="price-value">$260.99</span></p>`,
+    button: `<button class="slider-btn">Shop Now</button>`,
+    img: 'https://htmldemo.net/furnilife/furnilife/assets/images/sliders/03.webp'
+  },
+  {
+    text: `<p class="slider-offer">Exclusive offer -30% off this week</p>`,
+    heading: `<h1>Conbox Fan <br> Collection 2018</h1>`,
+    span: `<p class="slider-price">Starting at <span class="price-value">$260.99</span></p>`,
+    button: `<button class="slider-btn">Shop Now</button>`,
+    img: 'https://htmldemo.net/furnilife/furnilife/assets/images/sliders/02.webp'
+  }
+];
+
+let currentSlide = 0;
+
+function showSlide(index) {
+  const image = document.getElementById('slider-image');
+  const content = document.getElementById('slider-content');
+
+  if (index >= slides.length) currentSlide = 0;
+  if (index < 0) currentSlide = slides.length - 1;
+
+  const slide = slides[currentSlide];
+  image.classList.add('fade');
+  content.classList.add('fade');
+
+  image.src = slide.img;
+  content.innerHTML = `
+    ${slide.text || ''}
+    ${slide.heading || ''}
+    ${slide.span || ''}
+    ${slide.button || ''}
+  `;
+
+  setTimeout(() => {
+    image.classList.remove('fade');
+    content.classList.remove('fade');
+  }, 500);
+}
+
+function nextSlide() {
+  currentSlide++;
+  showSlide(currentSlide);
+}
+
+function prevSlide() {
+  currentSlide--;
+  showSlide(currentSlide);
+}
+
+// Product slider functionality
+const slider = document.getElementById("scrollable-slider");
+const tabButtons = document.querySelectorAll(".slider-tab");
+let currentOffset = 0;
+
+function scrollSlider(direction) {
+  const item = slider.querySelector(".slider-item");
+  const itemWidth = item.offsetWidth + 16; // item width + gap
+  const containerWidth = slider.parentElement.offsetWidth;
+  const visibleItems = Math.floor(containerWidth / itemWidth);
+  const scrollAmount = itemWidth * Math.min(visibleItems, 2); // Scroll by 2 items max
+  
+  currentOffset += direction * scrollAmount;
+  
+  const maxOffset = (slider.children.length - visibleItems) * itemWidth;
+  if (currentOffset < 0) currentOffset = 0;
+  if (currentOffset > maxOffset) currentOffset = maxOffset;
+  
+  slider.style.transform = `translateX(-${currentOffset}px)`;
+}
+
+// Tab functionality
+tabButtons.forEach(tab => {
+  tab.addEventListener("click", () => {
+    tabButtons.forEach(t => t.classList.remove("active"));
+    tab.classList.add("active");
+    
+    // Reset slider position when switching tabs
+    currentOffset = 0;
+    slider.style.transform = `translateX(0px)`;
+    
+    console.log(`Tab clicked: ${tab.textContent.trim()}`);
+  });
+});
+
+// Initialize hero slider
+showSlide(currentSlide);
+
+// Auto-scroll hero slider (optional)
+setInterval(() => {
+  nextSlide();
+}, 5000);
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    
+    mobileMenuToggle.addEventListener('click', function() {
+        this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
+        mobileMenu.classList.toggle('active');
+        
+        // Toggle icon animation
+        const iconSpans = this.querySelectorAll('.toggle__icon span');
+        iconSpans.forEach((span, index) => {
+            if (index === 0) {
+                span.style.transform = mobileMenu.classList.contains('active') ? 'rotate(45deg) translate(5px, 5px)' : '';
+            } else if (index === 1) {
+                span.style.opacity = mobileMenu.classList.contains('active') ? '0' : '1';
+            } else if (index === 2) {
+                span.style.transform = mobileMenu.classList.contains('active') ? 'rotate(-45deg) translate(5px, -5px)' : '';
+            }
+        });
+    });
+    
+    // Categories toggle (mobile only)
+    const categoriesToggle = document.querySelector('.categories-toggle');
+    if (categoriesToggle) {
+        const categoriesDropdown = document.querySelector('.categories-dropdown');
+        
+        categoriesToggle.addEventListener('click', function() {
+            this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
+            categoriesDropdown.classList.toggle('active');
+            
+            // Toggle icon animation
+            const iconSpans = this.querySelectorAll('.toggle__icon span');
+            iconSpans.forEach((span, index) => {
+                if (index === 0) {
+                    span.style.transform = categoriesDropdown.classList.contains('active') ? 'rotate(45deg) translate(5px, 5px)' : '';
+                } else if (index === 1) {
+                    span.style.opacity = categoriesDropdown.classList.contains('active') ? '0' : '1';
+                } else if (index === 2) {
+                    span.style.transform = categoriesDropdown.classList.contains('active') ? 'rotate(-45deg) translate(5px, -5px)' : '';
+                }
+            });
+        });
+    }
+    
+    // Mobile menu item toggle with plus icon
+    const mobileMenuItems = document.querySelectorAll('.mobile-menu__list li');
+    
+    mobileMenuItems.forEach(item => {
+        const link = item.querySelector('a');
+        const plusIcon = link.querySelector('.menu-item-plus');
+        const submenu = item.querySelector('.mobile-submenu');
+        
+        if (submenu) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                submenu.classList.toggle('active');
+                
+                // Toggle plus/minus icon
+                if (submenu.classList.contains('active')) {
+                    plusIcon.classList.remove('fa-plus');
+                    plusIcon.classList.add('fa-minus');
+                } else {
+                    plusIcon.classList.remove('fa-minus');
+                    plusIcon.classList.add('fa-plus');
+                }
+            });
+        }
+    });
+    
+    // Submenu toggle for mobile categories
+    const dropdownItems = document.querySelectorAll('.dropdown__item.has-children');
+    
+    dropdownItems.forEach(item => {
+        const link = item.querySelector('.dropdown__link');
+        const submenu = item.querySelector('.dropdown__submenu');
+        const plusIcon = item.querySelector('.dropdown__plus');
+        
+        link.addEventListener('click', function(e) {
+            if (window.innerWidth < 768) {
+                e.preventDefault();
+                submenu.classList.toggle('active');
+                
+                // Toggle plus/minus icon
+                if (submenu.classList.contains('active')) {
+                    plusIcon.classList.remove('fa-plus');
+                    plusIcon.classList.add('fa-minus');
+                } else {
+                    plusIcon.classList.remove('fa-minus');
+                    plusIcon.classList.add('fa-plus');
+                }
+            }
+        });
+    });
+    
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.navbar__left') && document.querySelector('.categories-dropdown')?.classList.contains('active')) {
+            document.querySelector('.categories-dropdown').classList.remove('active');
+            document.querySelector('.categories-toggle')?.setAttribute('aria-expanded', 'false');
+            
+            // Reset icon animation
+            const iconSpans = document.querySelector('.categories-toggle')?.querySelectorAll('.toggle__icon span');
+            if (iconSpans) {
+                iconSpans.forEach(span => {
+                    span.style.transform = '';
+                    span.style.opacity = '';
+                });
+            }
+        }
+        
+        if (!e.target.closest('.navbar__right') && mobileMenu.classList.contains('active')) {
+            mobileMenu.classList.remove('active');
+            mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            
+            // Reset icon animation
+            const iconSpans = mobileMenuToggle.querySelectorAll('.toggle__icon span');
+            iconSpans.forEach(span => {
+                span.style.transform = '';
+                span.style.opacity = '';
+            });
+        }
+    });
+});
+
+let currentSlideTwo = 0;
+        const totalSlides = 8;
+        const visibleSlides = 4;
+        const maxSlide = totalSlides - visibleSlides;
+        
+        const sliderTwo = document.getElementById('sliderTwo');
+        const counter = document.getElementById('counter');
+
+        function updateSlider() {
+            const translateX = -currentSlideTwo * (100 / visibleSlides);
+            sliderTwo.style.transform = `translateX(${translateX}%)`;
+            
+            const startNum = currentSlideTwo + 1;
+            const endNum = Math.min(currentSlideTwo + visibleSlides, totalSlides);
+            counter.textContent = `${startNum}-${endNum} of ${totalSlides}`;
+        }
+
+        function slideRight() {
+            if (currentSlideTwo < maxSlide) {
+                currentSlideTwo++;
+                updateSlider();
+            }
+        }
+
+        function slideLeft() {
+            if (currentSlideTwo > 0) {
+                currentSlideTwo--;
+                updateSlider();
+            }
+        }
+
+        // Initialize
+        updateSlider();
+
+        // Optional: Add keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') {
+                slideLeft();
+            } else if (e.key === 'ArrowRight') {
+                slideRight();
+            }
+        });
+
+        // Add click functionality to sidebar items
+        const sidebarItems = document.querySelectorAll('.sidebar li');
+        sidebarItems.forEach((item, index) => {
+            item.addEventListener('click', function() {
+                // Remove active class from all items
+                sidebarItems.forEach(i => i.style.borderLeft = '4px solid transparent');
+                // Add active state to clicked item
+                this.style.borderLeft = '4px solid #f39c12';
+                this.style.background = 'rgba(255, 255, 255, 0.2)';
+                
+                // Reset other items after a delay
+                setTimeout(() => {
+                    sidebarItems.forEach(i => {
+                        if (i !== this) {
+                            i.style.background = 'rgba(255, 255, 255, 0.1)';
+                        }
+                    });
+                }, 2000);
+            });
+        });
+        
+</script>
+
+</body>
+</html>

@@ -1,87 +1,98 @@
-<!-- components/navbar/navbar.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="navbar.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-container">
+                <!-- Left Side - Categories Toggle -->
+                <div class="categories-toggle" id="categoriesToggle">
+                    <i class="fas fa-bars icon"></i>
+                    <h3>CATEGORIES</h3>
+                </div>
 
-</html>
+                <!-- Middle - Nav Links -->
+                <div class="nav-links">
+                    <a href="#">Home<i class="fa fa-chevron-down"></i></a>
+                    <a href="#">Shop<i class="fa fa-chevron-down"></i></a>
+                    <a href="#">Pages<i class="fa fa-chevron-down"></i></a>
+                    <a href="#">Blog<i class="fa fa-chevron-down"></i></a>
+                    <a href="#">Contact</a>
+                </div>
 
-<nav class="main-nav">
-    <div class="main-nav__container">
-        <!-- Mobile Categories Toggle -->
-        <button class="main-nav__mobile-toggle main-nav__categories-toggle">
-            <span class="main-nav__toggle-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </span>
-            <span>CATEGORIES</span>
-        </button>
-        
-        <!-- Main Menu -->
-        <ul class="main-nav__menu">
-            <li class="main-nav__item">
-                <a href="#">HOME <i class="fas fa-chevron-down"></i></a>
-                <ul class="main-nav__submenu">
-                    <li><a href="#">Home 1</a></li>
-                    <li><a href="#">Home 2</a></li>
-                    <li><a href="#">Home 3</a></li>
-                </ul>
-            </li>
-            <li class="main-nav__item">
-                <a href="#">SHOP <i class="fas fa-chevron-down"></i></a>
-                <ul class="main-nav__submenu">
-                    <li><a href="#">Shop Grid</a></li>
-                    <li><a href="#">Shop List</a></li>
-                    <li><a href="#">Product Details</a></li>
-                </ul>
-            </li>
-            <li class="main-nav__item main-nav__item--active">
-                <a href="#">BLOG <i class="fas fa-chevron-down"></i></a>
-                <ul class="main-nav__submenu">
-                    <li><a href="#">Blog Grid</a></li>
-                    <li><a href="#">Blog Details</a></li>
-                </ul>
-            </li>
-            <li class="main-nav__item">
-                <a href="#">PAGES <i class="fas fa-chevron-down"></i></a>
-                <ul class="main-nav__submenu">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">FAQ</a></li>
-                </ul>
-            </li>
-            <li class="main-nav__item">
-                <a href="#">CONTACT</a>
-            </li>
-        </ul>
-        
-        <!-- Search -->
-        <div class="main-nav__search">
-            <input type="text" placeholder="Search Products..." class="main-nav__search-input">
-            <button class="main-nav__search-button">
-                <i class="fas fa-search"></i>
-            </button>
+                <!-- Right Side - Search and Menu Toggle -->
+                <div class="navbar-right">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search for products...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                    <div class="menu-toggle" id="menuToggle">
+                        <span>Menu</span>
+                        <i class="fas fa-bars icon"></i>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <!-- Mobile Menu Toggle -->
-        <button class="main-nav__mobile-toggle main-nav__menu-toggle">
-            <span>Menu</span>
-            <span class="main-nav__toggle-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </span>
-        </button>
+    </nav>
+
+    <!-- Categories Sidebar -->
+    <div class="categories-sidebar" id="categoriesSidebar">
+        <div class="sidebar-header">
+            <h3>All Categories</h3>
+            <i class="fas fa-times close-sidebar" id="closeSidebar"></i>
+        </div>
+        <ul class="categories-menu">
+            <li class="category-item">Sofas and Chairs</li>
+            <li class="category-item has-submenu" id="drawingRoom">
+                Drawing Room
+            </li>
+            <ul class="submenu" id="drawingRoomSubmenu">
+                <li class="submenu-item">Sofas</li>
+                <li class="submenu-item">Arm Chairs</li>
+                <li class="submenu-item">Coffee Tables</li>
+            </ul>
+            <li class="category-item has-submenu" id="diningRoom">
+                Dining Room
+            </li>
+            <ul class="submenu" id="diningRoomSubmenu">
+                <li class="submenu-item">Dining Tables</li>
+                <li class="submenu-item">Dining Chairs</li>
+                <li class="submenu-item">Benches</li>
+            </ul>
+            <li class="category-item">Outdoor Room</li>
+            <li class="category-item">Room Living</li>
+            <li class="category-item">Estilo</li>
+            <li class="category-item">Living Chairs</li>
+            <li class="category-item">...More</li>
+        </ul>
     </div>
-    
+
     <!-- Mobile Menu -->
-    <div class="main-nav__mobile-menu">
-        <ul class="main-nav__mobile-list">
-            <!-- Same items as main menu but optimized for mobile -->
-        </ul>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <h3>Menu</h3>
+            <i class="fas fa-times close-sidebar" id="closeMobileMenu"></i>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="#" class="mobile-nav-link">Home</a>
+            <a href="#" class="mobile-nav-link">Shop</a>
+            <a href="#" class="mobile-nav-link">Pages</a>
+            <a href="#" class="mobile-nav-link">Blog</a>
+            <a href="#" class="mobile-nav-link">Contact</a>
+        </div>
     </div>
-    
-    <!-- Categories Dropdown (Mobile) -->
-    <div class="main-nav__categories-dropdown">
-        <ul class="main-nav__categories-menu">
-            <!-- Categories items here -->
-        </ul>
-    </div>
-</nav>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+<script src="navbar.js"></script>
+
+</body>
+</html>
