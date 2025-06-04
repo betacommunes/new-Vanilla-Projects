@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .slider {
+            -webkit-appearance: none;
+            appearance: none;
+            height: 5px;
+            background: #e5e7eb;
+            border-radius: 5px;
+            outline: none;
+            /* Higher than progress bar */
+            position: absolute;
+            /* Make sure it's above progress bar */
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: all;
+        }
+        
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            background: #318792;
+            border-radius: 50%;
+            cursor: ew-resize;
+            transition: all 0.15s ease;
+        }
+        
+        .slider::-moz-range-thumb {
+            width: 18px;
+            height: 18px;
+            background: #318792;
+            border-radius: 50%;
+            cursor: ew-resize;
+            border: none;
+            transition: all 0.15s ease;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="  md:px-20 px-3 md:pt-20 pt-10 grid lg:grid-cols-12 gap-20">
+
+        <!-- right side posts -->
+
+        <div class="main-content lg:col-span-8 ">
+
+            <!-- select category -->
+            <div class="text-[12px] w-1/3">
+                <select class="bg-transparent w-full uppercase border-[1px] border-gray-200 p-3 outline-none cursor-pointer pr-5 tracking-widest font-semibold">
+                        <option>Sort By Latest</option>
+                        <option>Sort By Popularity</option>
+                        <option>Sort By Average Rating</option>
+                        <option>Sort By Price: low to high</option>
+                        <option>Sort By Price: high to Low</option>
+
+                    </select>
+            </div>
+
+            <!--show posts -->
+
+            <div id="post" class="posts grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 place-content-center gap-10 py-10 ">
+                <!-- products will render here -->
+            </div>
+        </div>
+        <!--left side -->
+
+        <div class="aside lg:col-span-4 space-y-10 ">
+
+
+            <!-- filter section-->
+            <div>
+                <p class="filter-box uppercase border-[1px] border-gray-200 p-3 text-center tracking-widest font-semibold text-[12px] ">filter by price</p>
+
+                <!-- Slider Container -->
+                <div class="p-6">
+                    <!-- Slider track -->
+                    <div class="relative h-10 mb-8 z-0">
+                        <div class="progress absolute" id="progress"></div>
+
+                        <input type="range" min="0" max="100" value="0" class="slider absolute top-1/2 w-full z-20" id="min-slider">
+                        <input type="range" min="0" max="100" value="100" class="slider absolute top-1/2 w-full z-20" id="max-slider">
+                    </div>
+
+                    <!-- Min/Max labels and Button -->
+                    <div class="flex justify-between items-center text-sm text-gray-500 mb-2">
+                        <button id="filter-btn" class="py-2 bg-shopBgClr tracking-[1px] text-white font-semibold rounded-sm uppercase flex items-center justify-center px-5">
+      <i class="fas fa-filter"></i> Filter
+    </button>
+                        <div>
+                            <p class="text-gray-300 text-[12px] tracking-[1px]">
+                                Price:
+                                <span class="text-shopClr font-semibold">$
+<span id="min-price">30</span>
+                                </span> -
+                                <span class="text-shopClr font-semibold">$ <span id="max-price">70</span></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product categories-->
+            <div class="product-categories space-y-5">
+                <p class="filter-box uppercase border-[1px] border-gray-200 p-3 text-center tracking-widest font-semibold text-[12px] ">product categories</p>
+
+                <ul class="pl-2 py-5  space-y-5 ">
+                    <li class="list-outside list-[circle] marker:text-shopClr border-b border-gray-200 pb-3 text-sm">
+                        <div class="flex justify-between">
+                            <a href="https://cheerup2.theme-sphere.com/product-category/accessories/">Accessories</a>
+                            <p class="text-gray-300">(4)</p>
+                        </div>
+                    </li>
+
+
+                    <li class="list-outside list-[circle] marker:text-shopClr border-b border-gray-200 pb-3 text-sm">
+                        <div class="flex justify-between">
+                            <a href="#">Dresses</a>
+                            <p class="text-gray-300">(10)</p>
+                        </div>
+                    </li>
+
+                    <li class="list-outside list-[circle] marker:text-shopClr border-b border-gray-200 pb-3 text-sm">
+                        <div class="flex justify-between">
+                            <a href="#">Pants & Jeans</a>
+                            <p class="text-gray-300">(13)</p>
+                        </div>
+                    </li>
+
+                    <li class="list-outside list-[circle] marker:text-shopClr border-b border-gray-200 pb-3 text-sm">
+                        <div class="flex justify-between">
+                            <a href="#">Uncategorized</a>
+                            <p class="text-gray-300">(20)</p>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+
+            <!-- Top Rated Products -->
+
+            <div class="top-rated-products space-y-5">
+                <p class="filter-box uppercase border-[1px] border-gray-200 p-3 text-center tracking-widest font-semibold text-[12px] ">top rated products</p>
+
+                <ul class=" space-y-5 lg:py-5 ">
+                    <li class=" flex  gap-10 1 border-b-[1px] border-gray-100 pb-5 ">
+                        <div class="image">
+                            <a href="#">
+                                <img class="h-20 hover:opacity-75" src="https://cheerup2.theme-sphere.com/wp-content/uploads/2016/05/tunic-dress-scaled-540x540.jpg" />
+                            </a>
+                        </div>
+                        <div class="content space-y-3">
+                            <h2 class=" font-semibold uppercase">Tunic Dress</h2>
+                            <a href="#" class=" flex items-center text-[12px] tracking-widest uppercase gap-5">
+                                <p class=" text-gray-400 font-semibold">$40</p>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class=" flex  gap-10 1 border-b-[1px] border-gray-100 pb-5 ">
+                        <div class="image">
+                            <a href="#">
+                                <img class="h-20 hover:opacity-75" src="https://cheerup2.theme-sphere.com/wp-content/uploads/2016/05/wood-heel-540x540.jpg" />
+                            </a>
+                        </div>
+                        <div class="content space-y-3">
+                            <h2 class=" font-semibold uppercase">wood heel</h2>
+                            <a href="#" class=" flex items-center text-[12px] tracking-widest uppercase gap-5">
+                                <p class=" text-gray-400 font-semibold">$67</p>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class=" flex  gap-10 3 ">
+                        <div class="image">
+                            <a href="#">
+                                <img class="h-20 hover:opacity-75" src="https://cheerup2.theme-sphere.com/wp-content/uploads/2016/05/skinny-jeans-scaled-540x540.jpg" />
+                            </a>
+                        </div>
+                        <div class="content space-y-3">
+                            <h2 class=" font-semibold uppercase">Skinny jeans</h2>
+                            <a href="#" class=" flex items-center text-[12px] tracking-widest uppercase gap-5">
+                                <p class=" text-gray-400 font-semibold">$36</p>
+                            </a>
+                        </div>
+                    </li>
+
+
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+
+    <script>
+        //priceRange
+
+        const minSlider = document.getElementById('min-slider');
+        const maxSlider = document.getElementById('max-slider');
+        const minPrice = document.getElementById('min-price');
+        const maxPrice = document.getElementById('max-price');
+        const progress = document.getElementById('progress');
+        const filterBtn = document.getElementById('filter-btn');
+
+        // Set initial progress bar
+        updateProgress();
+
+        minSlider.addEventListener('input', function() {
+            if (parseInt(minSlider.value) > parseInt(maxSlider.value)) {
+                minSlider.value = maxSlider.value;
+            }
+            updateProgress();
+        });
+
+        maxSlider.addEventListener('input', function() {
+            if (parseInt(maxSlider.value) < parseInt(minSlider.value)) {
+                maxSlider.value = minSlider.value;
+            }
+            updateProgress();
+        });
+
+        function updateProgress() {
+            minPrice.textContent = minSlider.value;
+            maxPrice.textContent = maxSlider.value;
+
+            const minPercent = minSlider.value;
+            const maxPercent = maxSlider.value;
+
+            progress.style.left = minPercent + '%';
+            progress.style.width = (maxPercent - minPercent) + '%';
+        }
+
+        filterBtn.addEventListener('click', function() {
+            // Add button animation
+            filterBtn.classList.add('bg-shopBgClr', 'scale-95');
+
+
+            // Show confirmation (in a real app, this would submit the filter)
+            alert(`Filter applied! Price range: $${minSlider.value} - $${maxSlider.value}`);
+        });
+        console.log("hello from price filter")
+    </script>
+</body>
+
+</html>

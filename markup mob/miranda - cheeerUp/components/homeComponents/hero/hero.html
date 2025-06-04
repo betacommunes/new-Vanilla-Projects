@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind CDN -->
+    <title>Fade Image Slider</title>
+</head>
+
+<body class="m-0 p-0 overflow-hidden">
+
+    <section class="group w-full h-screen relative flex items-center justify-center text-slate-100 overflow-hidden">
+
+
+        <!--slide 1 -->
+        <div id="slide" class="slide absolute inset-0 opacity-100 z-10 transition-opacity duration-700 ease-in-out
+                before:content-[''] before:absolute before:inset-0
+                before:bg-[url('https://cheerup2.theme-sphere.com/miranda/wp-content/uploads/sites/4/2016/05/Untitled-16-1536x547.jpg')]
+                before:bg-cover before:bg-contain before:bg-center before:brightness-75">
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-center space-y-8 p-4">
+                <p class="uppercase font-semibold tracking-[2px] text-sm">Lifestyle</p>
+                <h1 class="text-4xl font-semibold">Pleasant Colors in Garden</h1>
+                <div class="w-8 h-[2px] bg-white mx-auto"></div>
+                <button class="text-sm px-4 py-2 font-semibold border-2 border-white hover:bg-white
+                       hover:text-gray-900 transition">Continue Reading</button>
+            </div>
+        </div>
+
+        <!-- slide 2 -->
+        <div id="slide" class="slide absolute inset-0 opacity-0 z-0 transition-opacity duration-700 ease-in-out
+                before:content-[''] before:absolute before:inset-0
+                before:bg-[url('https://cheerup2.theme-sphere.com/miranda/wp-content/uploads/sites/4/2016/05/photo-1455225761879-2ed774963809-1536x1024.jpg')]
+                before:bg-cover before:bg-center before:brightness-75">
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-center space-y-8 p-4">
+                <p class="uppercase font-semibold tracking-[2px] text-sm">Beauty</p>
+                <h1 class="text-4xl font-semibold">Morning Coffee Smells Sweet</h1>
+                <div class="w-8 h-[2px] bg-white"></div>
+                <button class="text-sm px-4 py-2 font-semibold border-2 border-white hover:bg-white
+                       hover:text-gray-900 transition">Continue Reading</button>
+            </div>
+        </div>
+
+        <!--slide 3 -->
+
+        <div id="slide" class="slide absolute inset-0 opacity-0 z-0 transition-opacity duration-700 ease-in-out
+                before:content-[''] before:absolute before:inset-0
+                before:bg-[url('https://cheerup2.theme-sphere.com/miranda/wp-content/uploads/sites/4/2016/05/438-1536x1024.jpg')]
+                before:bg-cover before:bg-center before:brightness-75">
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-center space-y-8 p-4">
+                <p class="uppercase font-semibold tracking-[2px] text-sm">Beauty</p>
+                <h1 class="text-4xl font-semibold">Delicious Food in Breakfast</h1>
+                <div class="w-8 h-[2px] bg-white"></div>
+                <button class="text-sm px-4 py-2 font-semibold border-2 border-white hover:bg-white
+                       hover:text-gray-900 transition">Continue Reading</button>
+            </div>
+        </div>
+
+        <!-- slide 4 -->
+
+        <div id="slide" class="slide absolute inset-0 opacity-0 z-0 transition-opacity duration-700 ease-in-out
+                before:content-[''] before:absolute before:inset-0
+                before:bg-[url('https://cheerup2.theme-sphere.com/miranda/wp-content/uploads/sites/4/2016/05/610-1536x1024.jpg')]
+                before:bg-cover before:bg-center before:brightness-75">
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-center space-y-8 p-4">
+                <p class="uppercase font-semibold tracking-[2px] text-sm">Lifestyle</p>
+                <h1 class="text-4xl font-semibold">Colors to Wear this Fall</h1>
+                <div class="w-8 h-[2px] bg-white"></div>
+                <button class="text-sm px-4 py-2 font-semibold border-2 border-white hover:bg-white
+                       hover:text-gray-900 transition">Continue Reading</button>
+            </div>
+        </div>
+
+        <!-- slide 5 -->
+
+        <div id="slide" class="slide absolute inset-0 opacity-0 z-0 transition-opacity duration-700 ease-in-out
+                before:content-[''] before:absolute before:inset-0
+                before:bg-[url('https://cheerup2.theme-sphere.com/miranda/wp-content/uploads/sites/4/2016/05/622-1536x1024.jpg')]
+                before:bg-cover before:bg-center before:brightness-75">
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-center space-y-8 p-4">
+                <p class="uppercase font-semibold tracking-[2px] text-sm">Lifestyle</p>
+                <h1 class="text-4xl font-semibold">Christmas Came Early This Year</h1>
+                <div class="w-8 h-[2px] bg-white"></div>
+                <button class="text-sm px-4 py-2 font-semibold border-2 border-white hover:bg-white
+                       hover:text-gray-900 transition">Continue Reading</button>
+            </div>
+        </div>
+
+        <!-- left arrow -->
+        <div id="left-arrow" class="absolute left-5 top-1/2 -translate-y-1/2 z-20 hidden md:grid opacity-0 group-hover:opacity-100
+             place-content-center w-10 h-10 hover:bg-white border border-white text-white hover:text-gray-700 cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+      </svg>
+        </div>
+
+
+        <!--right arrow-->
+        <div id="right-arrow" class="absolute right-5 top-1/2 -translate-y-1/2 z-20 hidden md:grid opacity-0 group-hover:opacity-100
+             place-content-center w-10 h-10 hover:bg-white border border-white text-white hover:text-gray-700 cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+      </svg>
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>

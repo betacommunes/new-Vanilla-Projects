@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        a :active {
+            background-color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <aside id="sidebar" class="lg:hidden md:block h-screen fixed w-[80%] top-0 bg-white transform -translate-x-none -translate-x-full transition-transform duration-300 ease-in-out  z-[1000] px-3 overflow-y-auto">
+
+
+        <!-- close icon -->
+
+        <div id="close-icon" class=" absolute right-0 flex items-center justify-end w-10 h-10 text-white bg-black">
+            <span class=" cursor-pointer"> <i class=" font-bold ti-close p-3"></i></span>
+        </div>
+
+
+        <!-- logo -->
+
+        <div class="logo pt-20 pb-10  px-3 flex items-center justify-center">
+            <img class="" src="https://cheerup2.theme-sphere.com/miranda/wp-content/uploads/sites/4/2016/08/miranda-mobile-logo-2x.png" alt="Miranda">
+        </div>
+
+
+        <!-- list items -->
+
+        <div>
+            <ul class=" w-full uppercase flex flex-col items-center justify-between gap-5 ">
+
+                <!--Home -->
+                <li class="w-full group item-list border-b-[1px] border-gray-200 ">
+                    <!-- Added group class for state management -->
+                    <a href="/ " data-link class=" py-3 text-sm tracking-widest text-gray-900 group-hover:text-red-500  flex justify-between text-[1px] border-b-[1px] border-gray-200 ">
+                            Home
+                            <span
+                                class="ti-angle-down dropdown text-[8px] text-gray-300 group-hover:text-red-500 group-active:text-red-500 "></span>
+                        </a>
+                    <ul class=" child mx-5 hidden group-hover:block border-y-[1px] text-gray-500 text-[10px] border-gray-100 ">
+                        <li class=" border-b-[1px] px-5 py-3 border-gray-200 ">
+                            <a href="# " class="hover:text-red-500 py-3 tracking-widest ">
+                                    Slider Style
+                                </a>
+                        </li>
+                        <li class=" border-b-[1px] px-5 py-3 border-gray-200 ">
+                            <a href="# " class="hover:text-red-500 py-3 tracking-widest ">
+                                    classic Style
+                                </a>
+                        </li>
+                        <li class=" border-b-[1px] px-5 py-3 border-gray-200 ">
+                            <a href="# " class="hover:text-red-500 py-3 tracking-widest ">
+                                    List Style
+                                </a>
+                        </li>
+                        <li class=" px-5 py-3 ">
+                            <a href="# " class="hover:text-red-500 py-3 tracking-widest ">
+                                    grid Style
+                                </a>
+                        </li>
+                    </ul>
+
+                </li>
+
+                <!--features -->
+                <li class="w-full group item-list border-b-[1px] border-gray-200 ">
+                    <!-- Added group class for state management -->
+                    <a href="pages/feature.html " data-link class=" py-3 text-sm tracking-widest text-gray-900 group-hover:text-red-500 flex justify-between text-[1px] border-b-[1px] border-gray-200 ">
+                            Features
+                            <span
+                                class="ti-angle-down dropdown text-[8px] text-gray-300 group-hover:text-red-500 group-active:text-red-500 "></span>
+                        </a>
+                    <ul class=" child hidden group-hover:block mx-5 border-y-[1px] text-gray-500 text-[10px] border-gray-100 ">
+                        <li class=" border-b-[1px] py-3 border-gray-200 ">
+                            <a href="# " class="hover:text-red-500 py-3 tracking-widest ">
+                                    post styles
+                                </a>
+                        </li>
+                        <li class=" border-b-[1px] py-3 border-gray-200 ">
+                            <a href="# " class="hover:text-red-500 py-3 tracking-widest ">
+                                    header Style
+                                </a>
+                        </li>
+                        <li class=" border-b-[1px] py-3 border-gray-200 ">
+                            <a href="# " class="hover:text-red-500 py-3 tracking-widest ">
+                                    Footer Style
+                                </a>
+                        </li>
+                        <li class=" border-b-[1px] py-3 border-gray-200 ">
+                            <a href="# " class="hover:text-red-500 py-3 tracking-widest ">
+                                    category
+                                </a>
+                        </li>
+                        <li class=" border-b-[1px] py-3 border-gray-200 ">
+                            <a href="# " class="hover:text-red-500 py-3 tracking-widest ">
+                                    category
+                                </a>
+                        </li>
+                        <li class=" border-b-[1px] py-3 border-gray-200 ">
+                            <a href="# " class="hover:text-red-500 py-3 tracking-widest ">
+                                    layouts & templates
+                                </a>
+                        </li>
+                        <li class=" py-3 border-gray-200 ">
+                            <a href="# " class="hover:text-red-500 py-3 tracking-widest ">
+                                    galliries
+                                </a>
+                        </li>
+                    </ul>
+
+                </li>
+
+
+
+                <!--shop -->
+
+                <li class="w-full group item-list border-b-[1px] border-gray-200 ">
+                    <!-- Added group class for state management -->
+                    <a href="pages/shop.html " data-link class=" py-3 text-sm tracking-widest text-gray-900 group-hover:text-red-500 flex justify-between text-[1px] border-b-[1px] border-gray-200 ">
+shop
+                        <span class="ti-angle-down dropdown text-[8px] text-gray-300 group-hover:text-red-500 group-active:text-red-500 "></span>
+                    </a>
+                    <ul class=" child mx-5 hidden group-hover:block border-y-[1px] text-gray-500 text-[10px] border-gray-100 ">
+                        <li class=" border-b-[1px] py-3 border-gray-200 ">
+                            <a href="pages/shop.html " class="hover:text-red-500 py-3 tracking-widest ">
+the shop
+                            </a>
+                        </li>
+                        <li class=" border-b-[1px] py-3 border-gray-200 ">
+                            <a href="# " class="hover:text-red-500 py-3 tracking-widest ">
+the cart
+                            </a>
+                        </li>
+                        <li class=" border-b-[1px] py-3 border-gray-200 ">
+                            <a href="# " class="hover:text-red-500 py-3 tracking-widest ">
+my account
+                            </a>
+                        </li>
+                        <li class=" py-3 ">
+                            <a href="# " class="hover:text-red-500 py-3 tracking-widest ">
+                                    checkout
+                                </a>
+                        </li>
+                    </ul>
+
+                </li>
+                <!--Travel -->
+
+
+                <!--Home -->
+                <li class="w-full group item-list border-b-[1px] border-gray-200 ">
+                    <!-- Added group class for state management -->
+                    <a href="pages/travel.html " data-link class=" py-3 text-sm tracking-widest text-gray-900 group-hover:text-red-500 flex justify-between text-[1px] border-b-[1px] border-gray-200 ">
+Travel
+                    </a>
+
+                </li>
+
+                <!--buy theme -->
+
+                <li class=" w-full group border-b-[1px] border-gray-200 ">
+                    <a href="https://themeforest.net/item/cheerup-blog-magazine-wordpress-blog-theme/16430770?irgwc=1&clickid=wweXkQzNexycUD7SvOW23Qi-UksTeVzKCyInXM0&iradid=275988&irpid=364990&iradtype=ONLINE_TRACKING_LINK&irmptype=mediapartner&mp_value1=&utm_campaign=af_impact_radius_364990&utm_medium=affiliate&utm_source=impact_radius "
+                        class="uppercase py-3 text-sm tracking-widest text-gray-900 group-hover:text-red-500 ">buy
+                            theme</a>
+                </li>
+
+
+            </ul>
+        </div>
+
+    </aside>
+</body>
+
+</html>
+
+</html>
