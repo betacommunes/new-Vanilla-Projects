@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Company History Timeline</title>
+  <style>
+    :root {
+      --primary: #ef4444;
+      --background: #f9f9f9;
+      --text: #111827;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --white: #ffffff;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--background);
+      color: var(--text);
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    .history-container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .subtitle {
+      color: var(--primary);
+      font-style: italic;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .timeline {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      padding: 10px 0 20px;
+      border-bottom: 2px solid var(--border);
+      margin-bottom: 30px;
+    }
+
+    .year {
+      flex: 1 1 60px;
+      padding: 10px 14px;
+      background: var(--white);
+      border: 2px solid var(--border);
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      color: var(--muted);
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .year:hover {
+      background: var(--primary);
+      color: var(--white);
+      transform: translateY(-2px);
+      border-color: var(--primary);
+    }
+
+    .year.active {
+      background: var(--primary);
+      color: var(--white);
+      border-color: var(--primary);
+    }
+
+    .details-box {
+      border: 1.5px solid var(--primary);
+      border-radius: 6px;
+      padding: 20px;
+      background: var(--white);
+      text-align: left;
+    }
+
+    .details-box h3 {
+      margin-bottom: 5px;
+      color: var(--text);
+    }
+
+    .details-box small {
+      color: var(--primary);
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .details-box p {
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 600px) {
+      .year {
+        flex: 1 1 25%;
+        font-size: 13px;
+        padding: 8px;
+      }
+
+      .details-box {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="history-container">
+    <p class="subtitle">Our History</p>
+    <h2>How We Started Industry</h2>
+
+    <div class="timeline" id="timeline">
+      <!-- Years will be inserted here dynamically -->
+    </div>
+
+    <div class="details-box" id="detailsBox">
+      <h3>Company Started</h3>
+      <small>- 2010</small>
+      <p>In 2010, we laid the foundation of our dream to innovate and grow.</p>
+    </div>
+  </div>
+
+  <script>
+    const years = [
+      2010, 2011, 2012, 2013, 2014, 2015, 2016,
+      2017, 2018, 2019, 2020, 2021, 2022
+    ];
+
+    const detailsData = {
+      2010: {
+        title: "Company Started",
+        date: "2010",
+        text: "In 2010, we laid the foundation of our dream to innovate and grow."
+      },
+      2011: {
+        title: "First Office Opened",
+        date: "2011",
+        text: "We opened our first office and began hiring core team members."
+      },
+      2012: {
+        title: "Initial Projects Launched",
+        date: "2012",
+        text: "Launched our first set of client projects in the local market."
+      },
+      2013: {
+        title: "Growth in Clientele",
+        date: "2013",
+        text: "Increased client base by 150%, expanding our presence."
+      },
+      2014: {
+        title: "International Expansion",
+        date: "2014",
+        text: "Started working with international clients in UAE and UK."
+      },
+      2015: {
+        title: "Product Launch",
+        date: "2015",
+        text: "Launched our flagship digital product in the market."
+      },
+      2016: {
+        title: "Team Reached 50+",
+        date: "2016",
+        text: "Crossed 50+ employees, expanding across departments."
+      },
+      2017: {
+        title: "Major Award Won",
+        date: "2017",
+        text: "Won national tech innovation award for best emerging company."
+      },
+      2018: {
+        title: "New HQ Established",
+        date: "2018",
+        text: "Moved to a brand-new corporate office to support growth."
+      },
+      2019: {
+        title: "Expanded Services",
+        date: "2019",
+        text: "Added UI/UX, mobile development and cloud consulting services."
+      },
+      2020: {
+        title: "Remote Transformation",
+        date: "2020",
+        text: "Went fully remote during pandemic, increasing efficiency."
+      },
+      2021: {
+        title: "Client Milestone",
+        date: "2021",
+        text: "Served our 500th client with 95% satisfaction rate."
+      },
+      2022: {
+        title: "Innovation Lab Launched",
+        date: "2022",
+        text: "Started in-house R&D lab for AI, ML, and blockchain experiments."
+      }
+    };
+
+    const timeline = document.getElementById("timeline");
+    const detailsBox = document.getElementById("detailsBox");
+
+    years.forEach((year, index) => {
+      const btn = document.createElement("button");
+      btn.className = "year" + (index === 0 ? " active" : "");
+      btn.textContent = year;
+      btn.addEventListener("click", () => showDetails(year, btn));
+      timeline.appendChild(btn);
+    });
+
+    function showDetails(year, btn) {
+      document.querySelectorAll(".year").forEach((el) => el.classList.remove("active"));
+      btn.classList.add("active");
+
+      const data = detailsData[year];
+      detailsBox.innerHTML = `
+        <h3>${data.title}</h3>
+        <small>- ${data.date}</small>
+        <p>${data.text}</p>
+      `;
+    }
+  </script>
+
+</body>
+</html>

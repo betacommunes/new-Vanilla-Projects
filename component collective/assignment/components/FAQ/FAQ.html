@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Section</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #fa3d0e;
+            --text-color: #333;
+            --light-text: #777;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        /* FAQ Hero Section */
+        .faq-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .breadcrumb a:hover {
+            color: var(--primary-color);
+        }
+        
+        .breadcrumb-separator {
+            color: white;
+        }
+        
+        .faq-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        
+        /* FAQ Content Section */
+        .faq-section {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .faq-columns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        
+        .faq-column {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        
+        .faq-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .faq-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-number {
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-right: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .faq-question {
+            flex: 1;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--text-color);
+        }
+        
+        .faq-toggle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #f1f1f1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover .faq-toggle {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: var(--light-text);
+            line-height: 1.6;
+            margin-top: 0;
+            padding-top: 0;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        
+        .faq-item.active .faq-toggle i {
+            transform: rotate(45deg);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .faq-hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .faq-hero {
+                padding: 80px 0;
+            }
+            
+            .faq-hero h1 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .faq-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .faq-question {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- FAQ Hero Section -->
+    <section class="faq-hero">
+        <div class="breadcrumb">
+            <a href="#">Home</a>
+            <span class="breadcrumb-separator">/</span>
+            <span>FAQ</span>
+        </div>
+        <h1>FAQ</h1>
+    </section>
+
+    <!-- FAQ Content Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-columns">
+                <!-- First Column -->
+                <div class="faq-column">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item active">
+                        <div class="faq-header">
+                            <div class="faq-number">01.</div>
+                            <div class="faq-question">Why we are the best company?</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor eiusmod incididunt ut labore et dolore magna aliqua ut enim ad minim veniam nostrud exercitation.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item">
+                        <div class="faq-header">
+                            <div class="faq-number">02.</div>
+                            <div class="faq-question">Do I have to commit to a contract?</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our contracts are flexible with options for monthly or yearly commitments. You can cancel anytime with a 30-day notice period.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item">
+                        <div class="faq-header">
+                            <div class="faq-number">03.</div>
+                            <div class="faq-question">How to create energy for the future?</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We invest in renewable energy sources like solar, wind, and hydro power to create sustainable energy solutions for future generations.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item">
+                        <div class="faq-header">
+                            <div class="faq-number">04.</div>
+                            <div class="faq-question">What is the minimum and maximum loan amount?</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Minimum loan amount is $1,000 and maximum can go up to $1 million depending on your credit score and business requirements.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 5 -->
+                    <div class="faq-item">
+                        <div class="faq-header">
+                            <div class="faq-number">05.</div>
+                            <div class="faq-question">What will happen if I pick wrong plan?</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can change your plan within the first 30 days without any penalty. Our customer support will help you select the right plan.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 6 -->
+                    <div class="faq-item">
+                        <div class="faq-header">
+                            <div class="faq-number">06.</div>
+                            <div class="faq-question">Which one need for satisfying growing energy?</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>For growing energy needs, we recommend our premium solar solutions with battery storage options for continuous power supply.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Second Column -->
+                <div class="faq-column">
+                    <!-- FAQ Item 7 -->
+                    <div class="faq-item">
+                        <div class="faq-header">
+                            <div class="faq-number">07.</div>
+                            <div class="faq-question">Which one need for satisfying growing energy?</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do tempor eiusmod incididunt ut labore et dolore magna aliqua ut enim ad minim veniam nostrud exercitation.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 8 -->
+                    <div class="faq-item">
+                        <div class="faq-header">
+                            <div class="faq-number">08.</div>
+                            <div class="faq-question">What will happen if I pick wrong plan?</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our flexible plans allow you to upgrade or downgrade as needed. Contact our support team for assistance with plan changes.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 9 -->
+                    <div class="faq-item">
+                        <div class="faq-header">
+                            <div class="faq-number">09.</div>
+                            <div class="faq-question">What is the minimum and maximum loan amount?</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>For residential customers, minimum is $1,000 and maximum $50,000. Commercial customers can access up to $1 million.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 10 -->
+                    <div class="faq-item">
+                        <div class="faq-header">
+                            <div class="faq-number">10.</div>
+                            <div class="faq-question">How to create energy for the future?</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We're investing in next-generation technologies like fusion energy and advanced battery storage to power the future sustainably.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 11 -->
+                    <div class="faq-item">
+                        <div class="faq-header">
+                            <div class="faq-number">11.</div>
+                            <div class="faq-question">Do I have to commit to a contract?</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No long-term contracts required. We offer month-to-month plans with no cancellation fees.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 12 -->
+                    <div class="faq-item">
+                        <div class="faq-header">
+                            <div class="faq-number">12.</div>
+                            <div class="faq-question">Why we are the best company?</div>
+                            <div class="faq-toggle">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>With 20+ years in the industry, award-winning service, and 98% customer satisfaction, we lead the market in renewable energy solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const header = item.querySelector('.faq-header');
+                const toggle = item.querySelector('.faq-toggle');
+                
+                header.addEventListener('click', () => {
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+                
+                // Also make the toggle button clickable
+                toggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    header.click();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
