@@ -70,16 +70,17 @@ function initializeDropdowns() {
 
 
 // Route configuration
-// Route configuration
 const routes = {
   '/': '/pages/home.html',
   '/about': '/pages/about.html',
-  // Collection routes
   '/collections/bracelet': '/pages/collections/bracelet.html',
   '/collections/bridal-jewellery': '/pages/collections/bridal-jewellery.html',
   '/collections/earring': '/pages/collections/earring-collection/earring.html',
   '/collections/mens-jewellery': '/pages/collections/mens-jewellery.html',
   '/collections/engagement-ring': '/pages/collections/engagement-ring.html',
+  '/account/register': '/pages/auth/register.html',
+  '/account/signin': '/pages/auth/signin.html',
+
   // Add other routes here
 };
 
