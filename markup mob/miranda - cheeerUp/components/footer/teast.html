@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Year Test</title>
+</head>
+
+<body>
+    <footer>
+        <p>&copy; <span id="currentYear"></span> ThemeSphere</p>
+    </footer>
+
+    <script>
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+        console.log("Current Year Set:", new Date().getFullYear());
+    </script>
+</body>
+
+</html>

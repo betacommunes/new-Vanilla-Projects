@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Email Signup Modal</title>
+  <link rel="stylesheet" href="signup.css" />
+</head>
+<body>
+
+
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <button class="close-btn" id="closeBtn">&times;</button>
+    <div class="modal-content">
+      <!-- IMAGE FIRST (LEFT SIDE) -->
+      <div class="modal-image">
+        <img src="../../assets/image.jpg" alt="Facial Image" />
+      </div>
+
+      <!-- TEXT SECOND (RIGHT SIDE) -->
+      <div class="modal-text">
+        <h2>Signup for emails</h2>
+        <p>Sign up for our newsletter to be the first to learn about new arrivals, special promotions, and online exclusives.</p>
+        <div class="email-form">
+  <div class="input-wrapper">
+    <input type="email" placeholder="Enter your email" />
+    <button type="submit">Subscribe</button>
+  </div>
+</div>
+<button class="close-btn">&times;</button>
+        <p class="note">*By submitting this form, you agree to receive our emails and may unsubscribe at any time.</p>
+        <a href="#" id="noThanks">No thanks!</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="signup.js"></script>
+</body>
+</html>

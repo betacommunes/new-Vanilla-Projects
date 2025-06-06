@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Products</title>
+  <link rel="stylesheet" href="prod.css">
+</head>
+<body>
+
+<!-- Header Section -->
+<header class="product-header">
+  <div class="container">
+    <h1>Products</h1>
+    <p>Home • Products</p>
+  </div>
+</header>
+
+<!-- Main Content Section -->
+<section class="products-page">
+  <div class="container">
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="left-controls">
+
+        <!-- View Toggle -->
+        <div class="view-toggle">
+          <div id="listView" class="toggle-icon list-view" title="List View">
+            <span class="line"></span>
+            <span class="line"></span>
+          </div>
+          <div id="gridView" class="toggle-icon grid-view active" title="Grid View">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </div>
+        </div>
+
+        <!-- Sort Box -->
+        <div class="sort">
+          <label for="sort">Sort by:</label>
+          <select id="sort">
+            <option value="az">Alphabetically, A-Z</option>
+            <option value="za">Alphabetically, Z-A</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="total">12 products</div>
+    </div>
+
+    <!-- Main Area -->
+    <div class="main-area">
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+  <div class="filter-box">
+    <div class="filter-header">
+      <span class="filter-title">Availability</span>
+      <span class="arrow">▾</span>
+    </div>
+    <ul>
+      <li><label><input type="checkbox"><span class="option-text">In stock</span><span>(12)</span></label></li>
+      <li><label><input type="checkbox"><span class="option-text">Out of stock</span><span>(2)</span></label></li>
+    </ul>
+  </div>
+
+  <div class="filter-box">
+    <div class="filter-header">
+      <span class="filter-title">Color</span>
+      <span class="arrow">▾</span>
+    </div>
+    <ul>
+      <li><label><input type="checkbox"><span class="option-text">black</span><span>(10)</span></label></li>
+      <li><label><input type="checkbox"><span class="option-text">Black</span><span>(1)</span></label></li>
+      <li><label><input type="checkbox"><span class="option-text">blue</span><span>(5)</span></label></li>
+      <li><label><input type="checkbox"><span class="option-text">bronze</span><span>(1)</span></label></li>
+      <li><label><input type="checkbox"><span class="option-text">brown</span><span>(5)</span></label></li>
+      <li><label><input type="checkbox"><span class="option-text">gold</span><span>(1)</span></label></li>
+      <li><label><input type="checkbox"><span class="option-text">green</span><span>(5)</span></label></li>
+      <li><label><input type="checkbox"><span class="option-text">orange</span><span>(1)</span></label></li>
+      <li><label><input type="checkbox"><span class="option-text">red</span><span>(3)</span></label></li>
+      <li><label><input type="checkbox"><span class="option-text">yellow</span><span>(4)</span></label></li>
+    </ul>
+  </div>
+
+  <div class="filter-box">
+    <div class="filter-header">
+      <span class="filter-title">Size</span>
+      <span class="arrow">▾</span>
+    </div>
+    <ul>
+      <li><label><input type="checkbox"><span class="option-text">S</span><span>(7)</span></label></li>
+      <li><label><input type="checkbox"><span class="option-text">s</span><span>(5)</span></label></li>
+      <li><label><input type="checkbox"><span class="option-text">M</span><span>(7)</span></label></li>
+      <li><label><input type="checkbox"><span class="option-text">m</span><span>(5)</span></label></li>
+      <li><label><input type="checkbox"><span class="option-text">L</span><span>(7)</span></label></li>
+      <li><label><input type="checkbox"><span class="option-text">l</span><span>(5)</span></label></li>
+    </ul>
+  </div>
+
+  <div class="filter-box">
+    <div class="filter-header">
+      <span class="filter-title">Category</span>
+      <span class="arrow">▾</span>
+    </div>
+    <ul>
+      <li><label><input type="checkbox"><span class="option-text">Activeware</span><span>(5)</span></label></li>
+      <li><label><input type="checkbox"><span class="option-text">Activeware Pants</span><span>(1)</span></label></li>
+      <li><label><input type="checkbox"><span class="option-text">Activewear Sweatshirts & Hoodies</span><span>(1)</span></label></li>
+      <li><label><input type="checkbox"><span class="option-text">Activewear Tops</span><span>(1)</span></label></li>
+      <li><label><input type="checkbox"><span class="option-text">Backpacks</span><span>(1)</span></label></li>
+      <li><label><input type="checkbox"><span class="option-text">Exercise Bands & Loops</span><span>(1)</span></label></li>
+      <li><label><input type="checkbox"><span class="option-text">Gloves & Mittens</span><span>(1)</span></label></li>
+      <li><label><input type="checkbox"><span class="option-text">Jackets</span><span>(1)</span></label></li>
+      <li><label><input type="checkbox"><span class="option-text">Ping Pong Paddles & Sets</span><span>(1)</span></label></li>
+      <li><label><input type="checkbox"><span class="option-text">Sneakers</span><span>(2)</span></label></li>
+    </ul>
+    <div class="show-more">+ Show more</div>
+  </div>
+</aside>
+
+
+
+      <!-- Product Grid -->
+      <section class="featured-section" id="featuredProducts">
+        <!-- Product Card Example -->
+        <div class="product-card">
+          <div class="product-image">
+            <img src="../../assets/pic1.jpg" alt="Soothing Body Lotion">
+            <span class="sale-tag">-3% Sale</span>
+            <div class="top-icons">
+              <span class="icon wishlist" title="Add to Wishlist">♡</span>
+              <span class="icon cart" title="Add to Cart">🛒</span>
+            </div>
+            <div class="quick-add">Quick Add</div>
+          </div>
+          <div class="product-details">
+            <h3>Soothing Body Lotion</h3>
+            <div class="price">
+              <del>Rs 53,000.00</del>
+              <span class="discounted">Rs 51,600.00 PKR</span>
+            </div>
+            <div class="colors">
+              <span class="color blue" title="Blue"></span>
+              <span class="color green" title="Green"></span>
+              <span class="color black" title="Black"></span>
+            </div>
+          </div>
+        </div>
+<div class="pagination">
+  <span class="page">1</span>
+  <span class="page">2</span>
+  <span class="page">Next</span>
+</div>
+        
+      </section>
+    </div>
+  </div>
+</section>
+
+<script src="prod.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+:root {
+  --brand-color: #0f2a2a;
+  --surface-color: white;
+  --herotext-color: #fff;
+  --btn-color: #0b1d1d;
+  --btn-text: #fff;
+  --section-padding: 5%;
+  --font-size-title: 3rem;
+  --font-size-subtitle: 1.3rem;
+}
+
+/* Hero Section Wrapper */
+.hero-section {
+  padding: var(--section-padding);
+  background-color: var(--surface-color);
+  box-sizing: border-box;
+}
+
+/* Image wrapper holds image and overlay text */
+.hero-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Full-width background image */
+.hero-image-bg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+
+/* Zoom on hover */
+.hero-image-wrapper:hover .hero-image-bg {
+  transform: scale(1.05);
+}
+
+/* Text positioned over image */
+.hero-text-overlay {
+  position: absolute;
+  top: 10px;
+  left: 5%;
+  max-width: 40%;
+  padding: 20px;
+}
+
+/* Heading style */
+.hero-text-overlay h1 {
+  font-size: var(--font-size-title);
+  margin-bottom: 15px;
+  color: var(--brand-color);
+}
+
+/* Paragraph style */
+.hero-text-overlay p {
+  font-size: var(--font-size-subtitle);
+  margin-bottom: 30px;
+  color: var(--brand-color);
+}
+
+/* Button style */
+.hero-text-overlay button {
+  background-color: var(--btn-color);
+  color: var(--btn-text);
+  padding: 12px 24px;
+  border: none;
+  font-weight: lighter;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+.hero-text-overlay button:hover {
+  background-color: #061212;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-text-overlay {
+    position: static;
+    background: transparent;
+    color: var(--brand-color);
+    max-width: 100%;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .hero-text-overlay h1,
+  .hero-text-overlay p {
+    color: var(--brand-color);
+  }
+
+  .hero-image-bg {
+    border-radius: 5px;
+  }
+}

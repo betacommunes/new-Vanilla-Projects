@@ -1,0 +1,94 @@
+:root {
+  --primary-color: #0f2c2c;
+  --secondary-color: #1c1c1c;
+  --btn-bg: #0a2c3f;
+  --btn-text: #fff;
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-heading: 'Georgia', serif;
+  --text-color: #333;
+  --padding: 4rem;
+}
+
+body {
+  font-family: var(--font-main);
+  margin: 0;
+  background-color: #fff;
+  color: var(--text-color);
+}
+
+.deal-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: var(--padding);
+}
+
+.deal-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 0 5%;
+}
+
+.deal-images {
+  display: flex;
+ gap: 4rem;
+  flex: 1;
+  align-items: center;
+}
+
+.deal-images img:first-child {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+}
+
+.deal-images img:last-child {
+  width: 320px;
+  height: 550px;
+  object-fit: cover;
+}
+
+
+.deal-text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.deal-text small {
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  line-height: 2;
+}
+
+.deal-text h2 {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin: 0.5rem 0;
+}
+
+.deal-text p {
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.deal-text button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.deal-text button:hover {
+  background-color: #fff;            /* ✅ White background */
+  color: var(--btn-bg);              /* ✅ Text color same as old bg */
+  border: none;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.)
+}

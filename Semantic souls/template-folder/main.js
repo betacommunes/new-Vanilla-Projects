@@ -1,4 +1,11 @@
 // main.js
+import initializeSlick from "./components/logo-section/secript.js";
+import initializeSlickSlider2 from './components/slider2/slider2.js';
+import initializeReviewSlider from './components/review/review.js';
+import initializeViewToggle from './pages/collections/earring-collection/earring-collection.js'
+// myAlert("guten tag!")
+
+
 
 // Base URL for all requests
 const BASE_URL = window.location.origin;
@@ -70,7 +77,7 @@ const routes = {
   // Collection routes
   '/collections/bracelet': '/pages/collections/bracelet.html',
   '/collections/bridal-jewellery': '/pages/collections/bridal-jewellery.html',
-  '/collections/earring': '/pages/collections/earring.html',
+  '/collections/earring': '/pages/collections/earring-collection/earring.html',
   '/collections/mens-jewellery': '/pages/collections/mens-jewellery.html',
   '/collections/engagement-ring': '/pages/collections/engagement-ring.html',
   // Add other routes here
@@ -78,7 +85,7 @@ const routes = {
 
 // Load and render page
 async function renderPage(path = '/') {
-  const app = document.getElementById('app');
+  const app = document.getElementById('app'); 
   try {
     const pagePath = routes[path] || '/pages/404.html';
     const pageHTML = await loadHTML(pagePath);
@@ -89,8 +96,17 @@ async function renderPage(path = '/') {
     await injectComponents(tempDiv);
     app.innerHTML = tempDiv.innerHTML;
     
-    // Initialize dropdowns after components are loaded
+   
+
+    // Initialize dropdowns
     initializeDropdowns();
+
+    // 🆕 Initialize slick (after logos are in the DOM)
+    initializeSlick();
+    initializeSlickSlider2();
+    initializeReviewSlider();
+    initializeViewToggle();
+
 
     // Update active link in navbar
     document.querySelectorAll('[data-link]').forEach(link => {

@@ -34,3 +34,35 @@ async function renderPage(pagePath = './pages/home.html') {
 }
 
 renderPage(); // By default, load home.html
+
+
+
+
+
+// async function renderPage(pagePath = './pages/home.html') {
+//   const app = document.getElementById('app');
+//   try {
+//     const pageHTML = await loadHTML(pagePath);
+//     const tempDiv = document.createElement('div');
+//     tempDiv.innerHTML = pageHTML;
+
+//     await injectComponents(tempDiv);
+//     app.innerHTML = tempDiv.innerHTML;
+//   } catch (err) {
+//     app.innerHTML = `<p>Error: ${err.message}</p>`;
+//   }
+// }
+
+// function handleRouting() {
+//   const page = location.hash.replace('#', '') || 'home';
+//   renderPage(`./pages/${page}.html`);
+// }
+
+// window.addEventListener('hashchange', handleRouting);
+// window.addEventListener('DOMContentLoaded', handleRouting);
+
+
+// window.addEventListener('hashchange', () => {
+//   const page = location.hash.replace('#', '') || 'home';
+//   renderPage(`./pages/${page}.html`);
+// });

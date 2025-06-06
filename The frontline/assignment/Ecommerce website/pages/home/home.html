@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Add this in the <head> or just above </body> -->
+  <title>Novana</title>
+  <!-- ✅ FONT AWESOME - Must Be Inside <head> -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-RCk+UcV+G6U54wDkFVFb1j49kuZ3KJ98MxCl2XGi8Z3tA3kAJL6IdTgu6cyyO2D6HOJ7+o9dbkeVb4+lXQ1u7g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+<!-- Flash Sale Banner -->
+  <div class="flash-sale-container">
+  <div class="flash-sale" id="flash-sale">
+    <div class="flash-slide">Flash Sale Weekend. Up to <span style="font-weight: bold;">50%</span> off <a href="#">Learn more</a></div>
+  </div>
+</div>
+
+<!-- Signup -->
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <button class="close-btn" id="closeBtn">&times;</button>
+    <div class="modal-content">
+      <!-- IMAGE FIRST (LEFT SIDE) -->
+      <div class="modal-image">
+        <img src="../../assets/image.jpg" alt="Facial Image" />
+      </div>
+
+      <!-- TEXT SECOND (RIGHT SIDE) -->
+      <div class="modal-text">
+        <h2>Signup for emails</h2>
+        <p>Sign up for our newsletter to be the first to learn about new arrivals, special promotions, and online exclusives.</p>
+        <div class="email-form">
+  <div class="input-wrapper">
+    <input type="email" placeholder="Enter your email" />
+    <button type="submit">Subscribe</button>
+  </div>
+</div>
+<button class="close-btn">&times;</button>
+        <p class="note">*By submitting this form, you agree to receive our emails and may unsubscribe at any time.</p>
+        <a href="#" id="noThanks">No thanks!</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- Navbar -->
+  <header class="navbar">
+<div class="mobile-left">
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+  </div>
+
+
+    <div class="top-left">
+      <select>
+        <option>English</option>
+        <option>Urdu</option>
+      </select>
+      <select>
+        <option>Pakistan PKR Rs</option>
+        <option>USD $</option>
+      </select>
+    </div>
+
+    <div class="logo">
+      <img src="../../assets/img.jpg" alt="Logo" />
+      
+    </div>
+
+    <div class="icons">
+      <span class="icon">🔍</span>
+      <span class="icon">➕<sup>0</sup></span>
+      <span class="icon">🤍<sup>0</sup></span>
+      <span class="icon">🛍️<sup>0</sup></span>
+    </div>
+  </header>
+
+  <!-- Navigation Links -->
+  <nav class="nav-links" id="navMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="pages/shop/shop.html">Shop</a></li>
+      <li><a href="pages/about/about.html">About us</a></li>
+      <li><a href="pages/blog/blog.html">Blog</a></li>
+      <li><a href="#">Pages</a></li>
+      <li><a href="pages/contact/contact.html">Contact</a></li>
+
+    </ul>
+  </nav>
+
+
+
+<!-- Slider Section -->
+  <section class="slider-section">
+    <div class="slides-container" id="slidesContainer">
+      <!-- Slides inserted by JS -->
+    </div>
+
+    <div class="controls">
+      <span class="prev">&lt;</span>
+      <span class="next">&gt;</span>
+    </div>
+    <div class="dots" id="dotsContainer"></div>
+  </section>
+
+
+  <section class="category-section">
+   <div class="heading-row">
+  <h2>Shop by category</h2>
+  <div class="nav-buttons">
+    <button onclick="scrollLeft()">&lt;</button>
+      <button onclick="scrollRight()">&gt;</button>
+  </div>
+</div>
+<div id="category-container" class="category-row"></div>
+
+   </section>
+
+   <section class="gallery" id="imageGallery">
+    <!-- First Image Static -->
+    <div class="image-card">
+      <img src="../../assets/banner-1.jpg" alt="Product 1" />
+      <div class="label">Best Collection</div>
+      <a href="https://example.com/product1" class="shop-button">Shop Now →</a>
+    </div>
+  </section>
+
+  <!-- Featured Collection-->
+   <h2>Featured Collection</h2>
+   <section class="featured-section" id="featuredProducts">
+  <!-- One static product card -->
+  <div class="product-card">
+    <div class="product-image">
+      <img src="../../assets/pic1.jpg" alt="Soothing Body Lotion">
+      <span class="sale-tag">-3% Sale</span>
+      <div class="top-icons">
+        <span class="icon wishlist" title="Add to Wishlist">♡</span>
+        <span class="icon cart" title="Add to Compare">🛒</span>
+      </div>
+      <div class="quick-add">Quick Add</div>
+    </div>
+    <div class="product-details">
+      <h3>Soothing Body Lotion</h3>
+      <div class="price">
+        <del>Rs 53,000.00</del>
+        <span class="discounted">Rs 51,600.00 PKR</span>
+      </div>
+      <div class="colors">
+        <span class="color blue"></span>
+        <span class="color green"></span>
+        <span class="color black"></span>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- View All Button -->
+<div class="view-all-container">
+  <button class="view-all">View All</button>
+</div>
+
+<!-- Beauty Section -->
+ <section class="beauty-section">
+  <div class="beauty-content">
+    <p class="beauty-text">
+      Beauty has long been a source of inspiration, confidence, and self-expression. While it is often associated with physical appearance, true beauty transcends superficial features.
+    </p>
+
+    <div class="brand-logos">
+      <img src="../../assets/Logo_1.webp" alt="logo 1" />
+      <img src="../../assets/Logo_4.webp" alt="logo 2" />
+      <img src="../../assets/Logo-7.png" alt="logo 3" />
+      <img src="../../assets/Logo_2.webp" alt="logo 4" />
+      <img src="../../assets/Logo_5.webp" alt="logo 5" />
+    </div>
+    </div>
+  </section>
+
+
+<!-- Deal section -->
+ <!-- Container for sections -->
+  <div class="deal-sections" id="dealContainer"></div>
+
+<!-- Payment Section -->
+ <h2 class="features-heading">Why shop with us?</h2>
+<section id="features-section" class="features-section"></section>
+
+<!-- Hero Section -->
+ <section class="hero-section" id="hero-section">
+    <!-- Dynamic content will be injected here by JS -->
+  </section>
+
+  <!--FAQ Section!-->
+  <section class="faq-section">
+    <div class="faq-image">
+      <img src="../../assets/faq-1.webp" alt="Product" />
+    </div>
+    <div class="faq-content">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <button class="faq-question">Is free shipping available?<span class="arrow">▼</span></button>
+        <div class="faq-answer">
+          <p>Inform your customers about your brand. Make announcements, describe a product, or welcome customers to your store.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">Is the product I'm looking for in stock and available?<span class="arrow">▼</span></button>
+        <div class="faq-answer">
+          <p>Check product availability on the product page. Availability updates in real time.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">How do I get service on an appliance I purchased from your store?<span class="arrow">▼</span></button>
+        <div class="faq-answer">
+          <p>You can reach out to our customer service or visit the nearest service center with your purchase details.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Testimonial Section -->
+ <section class="testimonial-slider">
+  <div class="testimonial-content">
+    <div class="stars">★★★★★</div>
+    <p id="feedback">
+      Thanks for the feedback. We are always looking to improve our product and we would love to look into this issue with you further.
+    </p>
+    <h3 id="name">John</h3>
+    <div class="dots-1" id="dots"></div>
+  </div>
+  <div class="right-image">
+    <img id="testimonial-img" src="../../testimonial-2.webp" alt="User Image"/>
+  </div>
+  
+</section>
+
+
+<!-- Instagram Section -->
+ <!-- Instagram Section (from your screenshot) -->
+  <section class="instagram">
+    <h2><span>@</span>Instagram</h2>
+    <p>Follow the most popular trends and get exclusive items from Foesta shop.</p>
+    <div class="images">
+  <div class="insta-image">
+    <img src="../../assets/insta-1.webp" alt="Model 1" />
+    <div class="overlay">
+      <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+ <svg fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20.445 5h-8.891A6.559 6.559 0 0 0 5 11.554v8.891A6.559 6.559 0 0 0 11.554 27h8.891a6.56 6.56 0 0 0 6.554-6.555v-8.891A6.557 6.557 0 0 0 20.445 5zm4.342 15.445a4.343 4.343 0 0 1-4.342 4.342h-8.891a4.341 4.341 0 0 1-4.341-4.342v-8.891a4.34 4.34 0 0 1 4.341-4.341h8.891a4.342 4.342 0 0 1 4.341 4.341l.001 8.891z"/>
+    <path d="M16 10.312c-3.138 0-5.688 2.551-5.688 5.688s2.551 5.688 5.688 5.688 5.688-2.551 5.688-5.688-2.55-5.688-5.688-5.688zm0 9.163a3.475 3.475 0 1 1-.001-6.95 3.475 3.475 0 0 1 .001 6.95zM21.7 8.991a1.363 1.363 0 1 1-1.364 1.364c0-.752.51-1.364 1.364-1.364z"/></svg>
+    </div>
+  </div>
+  <div class="insta-image">
+    <img src="../../assets/insta-2.webp" alt="Model 2" />
+    <div class="overlay">
+      <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+ <svg fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20.445 5h-8.891A6.559 6.559 0 0 0 5 11.554v8.891A6.559 6.559 0 0 0 11.554 27h8.891a6.56 6.56 0 0 0 6.554-6.555v-8.891A6.557 6.557 0 0 0 20.445 5zm4.342 15.445a4.343 4.343 0 0 1-4.342 4.342h-8.891a4.341 4.341 0 0 1-4.341-4.342v-8.891a4.34 4.34 0 0 1 4.341-4.341h8.891a4.342 4.342 0 0 1 4.341 4.341l.001 8.891z"/>
+    <path d="M16 10.312c-3.138 0-5.688 2.551-5.688 5.688s2.551 5.688 5.688 5.688 5.688-2.551 5.688-5.688-2.55-5.688-5.688-5.688zm0 9.163a3.475 3.475 0 1 1-.001-6.95 3.475 3.475 0 0 1 .001 6.95zM21.7 8.991a1.363 1.363 0 1 1-1.364 1.364c0-.752.51-1.364 1.364-1.364z"/></svg>
+    </div>
+  </div>
+  <div class="insta-image">
+    <img src="../../assets/insta-3.webp" alt="Model 3" />
+   <div class="overlay">
+      <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+ <svg fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20.445 5h-8.891A6.559 6.559 0 0 0 5 11.554v8.891A6.559 6.559 0 0 0 11.554 27h8.891a6.56 6.56 0 0 0 6.554-6.555v-8.891A6.557 6.557 0 0 0 20.445 5zm4.342 15.445a4.343 4.343 0 0 1-4.342 4.342h-8.891a4.341 4.341 0 0 1-4.341-4.342v-8.891a4.34 4.34 0 0 1 4.341-4.341h8.891a4.342 4.342 0 0 1 4.341 4.341l.001 8.891z"/>
+    <path d="M16 10.312c-3.138 0-5.688 2.551-5.688 5.688s2.551 5.688 5.688 5.688 5.688-2.551 5.688-5.688-2.55-5.688-5.688-5.688zm0 9.163a3.475 3.475 0 1 1-.001-6.95 3.475 3.475 0 0 1 .001 6.95zM21.7 8.991a1.363 1.363 0 1 1-1.364 1.364c0-.752.51-1.364 1.364-1.364z"/></svg>
+    </div>
+  </div>
+  <div class="insta-image">
+    <img src="../../assets/insta-4.webp" alt="Facial" />
+    <div class="overlay">
+      <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+ <svg fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20.445 5h-8.891A6.559 6.559 0 0 0 5 11.554v8.891A6.559 6.559 0 0 0 11.554 27h8.891a6.56 6.56 0 0 0 6.554-6.555v-8.891A6.557 6.557 0 0 0 20.445 5zm4.342 15.445a4.343 4.343 0 0 1-4.342 4.342h-8.891a4.341 4.341 0 0 1-4.341-4.342v-8.891a4.34 4.34 0 0 1 4.341-4.341h8.891a4.342 4.342 0 0 1 4.341 4.341l.001 8.891z"/>
+    <path d="M16 10.312c-3.138 0-5.688 2.551-5.688 5.688s2.551 5.688 5.688 5.688 5.688-2.551 5.688-5.688-2.55-5.688-5.688-5.688zm0 9.163a3.475 3.475 0 1 1-.001-6.95 3.475 3.475 0 0 1 .001 6.95zM21.7 8.991a1.363 1.363 0 1 1-1.364 1.364c0-.752.51-1.364 1.364-1.364z"/></svg>
+    </div>
+  </div>
+  <div class="insta-image">
+    <img src="assets/insta-5.webp" alt="Foot spa" />
+    <div class="overlay">
+      <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+ <svg fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20.445 5h-8.891A6.559 6.559 0 0 0 5 11.554v8.891A6.559 6.559 0 0 0 11.554 27h8.891a6.56 6.56 0 0 0 6.554-6.555v-8.891A6.557 6.557 0 0 0 20.445 5zm4.342 15.445a4.343 4.343 0 0 1-4.342 4.342h-8.891a4.341 4.341 0 0 1-4.341-4.342v-8.891a4.34 4.34 0 0 1 4.341-4.341h8.891a4.342 4.342 0 0 1 4.341 4.341l.001 8.891z"/>
+    <path d="M16 10.312c-3.138 0-5.688 2.551-5.688 5.688s2.551 5.688 5.688 5.688 5.688-2.551 5.688-5.688-2.55-5.688-5.688-5.688zm0 9.163a3.475 3.475 0 1 1-.001-6.95 3.475 3.475 0 0 1 .001 6.95zM21.7 8.991a1.363 1.363 0 1 1-1.364 1.364c0-.752.51-1.364 1.364-1.364z"/></svg>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <!-- Looping Marquee Section -->
+ <div class="ticker-container">
+  <div class="ticker-track" id="ticker-track">
+    <!-- JS will inject spans here -->
+  </div>
+</div>
+
+  <!-- Main Footer -->
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3 class="footer-heading toggle-title">Contact Info <span class="toggle-icon">+</span></h3>
+      <ul class="footer-list">
+        <li>Find a location nearest you.</li>
+        <li><strong>Hotline:</strong> (+00) 123 - 4568</li>
+        <li><strong>Address:</strong> 512 Howard Street #19 San Francisco, USA</li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3 class="footer-heading toggle-title">Quick Links <span class="toggle-icon">+</span></h3>
+      <ul class="footer-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Pages</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3 class="footer-heading toggle-title">Information <span class="toggle-icon">+</span></h3>
+      <ul class="footer-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Pages</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3 class="footer-heading toggle-title">Let’s Get In Touch <span class="toggle-icon">+</span></h3>
+      <p>Subscribe to our newsletter to receive news on update.</p>
+      <form>
+        <input type="email" placeholder="Enter your email" />
+        <button type="submit">→</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-line"></div>
+  <div class="footer-bottom">
+    <div class="logo">🌿 Novana</div>
+    <div class="copyright">©2025 Novana shopify theme</div>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-pinterest-p"></i></a>
+    </div>
+  </div>
+</footer>
+
+
+
+  <script src="home.js"></script>
+</body>
+</html>

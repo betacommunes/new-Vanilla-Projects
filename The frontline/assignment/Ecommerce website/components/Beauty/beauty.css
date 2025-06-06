@@ -1,0 +1,78 @@
+:root {
+  --bg-color: #f8f8f8;
+  --text-color: #111;
+  --logo-width: 80px;
+  --text-animate-time: 1s;
+  --logo-cycle-time: 3s;
+  --side-space: 5%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: white;
+  color: var(--text-color);
+}
+
+/* outer section stays white */
+.beauty-section {
+  display: flex;
+  justify-content: center;
+  padding-block: 60px;
+  padding-inline: var(--side-space);
+  background: white;
+}
+
+/* inner box with grey background */
+.beauty-content {
+  width: 100%;
+  max-width: 1200px;
+  background-color: var(--bg-color);
+  padding: 40px 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.beauty-text {
+  font-size: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto 50px;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(60px);
+  animation: slideUp var(--text-animate-time) ease-out forwards;
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.brand-logos {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.brand-logos img {
+  width: var(--logo-width);
+  animation: flicker var(--logo-cycle-time) infinite alternate ease-in-out;
+}
+
+@keyframes flicker {
+  0% {
+    filter: grayscale(100%) brightness(0.7);
+    opacity: 0.6;
+  }
+  50% {
+    filter: grayscale(20%) brightness(1.1);
+    opacity: 1;
+  }
+  100% {
+    filter: grayscale(100%) brightness(0.7);
+    opacity: 0.6;
+  }
+}

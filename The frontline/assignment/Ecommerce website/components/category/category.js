@@ -2,22 +2,22 @@ const categories = [
   {
     title: "Body care",
     items: "9Items",
-    img: "category-1.jpg"
+    img: "../../assets/category-1.jpg"
   },
   {
     title: "Face cream",
     items: "8Items",
-    img: "category-2.jpg"
+    img: "../../assets/category-2.jpg"
   },
   {
     title: "Best Seller",
     items: "12Items",
-    img: "category-3.jpg"
+    img: "../../assets/category-3.jpg"
   },
   {
     title: "Skin care",
     items: "9Items",
-    img: "insta-4.jpg"
+    img: "../../assets/insta-4.jpg"
   }
 ];
 
@@ -42,13 +42,13 @@ const gallerySection = document.getElementById("imageGallery");
 
 const images = [
   {
-    src: "banner-2.jpg",
+    src: "../../assets/banner-2.jpg",
     alt: "Product 2",
     link: "https://example.com/product2",
     label: "What's New"
   },
   {
-    src: "banner-3.jpg",
+    src: "../../assets/banner-3.jpg",
     alt: "Product 3",
     link: "https://example.com/product3",
     label: "Tips and Trends"

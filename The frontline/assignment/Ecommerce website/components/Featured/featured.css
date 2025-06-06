@@ -1,7 +1,8 @@
+/*===== Featured Collection CSS ====*/
 :root {
   --font-family: 'Segoe UI', sans-serif;
-  --card-width: 250px;
-  --image-height: 280px;
+  --card-width: 320px;
+  --image-height: 300px;
   --bg-white: #fff;
   --text-color: #000;
   --gray: #777;
@@ -11,17 +12,18 @@
   --hover-bg: #f2f2f2;
 }
 
-body {
-  font-family: var(--font-family);
-  margin: 0;
-  padding: 0;
+h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 5% 5%;
+  color: #000;
 }
 
 .featured-section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  padding: 30px;
+  gap: 10px;
+  padding: 15px 4%;
   justify-items: center;
 }
 
@@ -53,10 +55,10 @@ body {
   top: 10px;
   left: 10px;
   background: var(--bg-white);
-  color: var(--text-color);
+ color: var(--color-text);
+  padding: 5px 10px;
   font-size: 14px;
-  padding: 4px 8px;
-  font-weight: bold;
+  border-radius: 3px;
   z-index: 2;
 }
 
@@ -109,7 +111,7 @@ body {
 .product-details h3 {
   margin: 10px 0 5px;
   font-size: 16px;
-  color: var(--text-color);
+  color: var(--color-text);
 }
 
 .price del {
@@ -118,7 +120,7 @@ body {
 }
 
 .price .discounted {
-  color: var(--text-color);
+  color: var(--gray);
   font-weight: bold;
 }
 
@@ -127,6 +129,7 @@ body {
   justify-content: center;
   gap: 8px;
   margin-top: 6px;
+  cursor: pointer;
 }
 
 .color {

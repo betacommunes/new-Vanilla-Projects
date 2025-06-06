@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>About</title>
+  <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+  <!-- Flash Sale Banner -->
+  <div class="flash-sale-container">
+  <div class="flash-sale" id="flash-sale">
+    <div class="flash-slide">Flash Sale Weekend. Up to <span style="font-weight: bold;">50%</span> off <a href="#">Learn more</a></div>
+  </div>
+</div>
+
+<!-- Navbar -->
+  <header class="navbar">
+<div class="mobile-left">
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+  </div>
+
+
+    <div class="top-left">
+      <select>
+        <option>English</option>
+        <option>Urdu</option>
+      </select>
+      <select>
+        <option>Pakistan PKR Rs</option>
+        <option>USD $</option>
+      </select>
+    </div>
+
+    <div class="logo">
+      <img src="../../assets/img.jpg" alt="Logo" />
+      
+    </div>
+
+    <div class="icons">
+  <div class="icon">
+    <i class="fas fa-search"></i>
+  </div>
+  <div class="icon badge-icon">
+    <i class="fas fa-sliders-h"></i>
+    <span class="badge">0</span>
+  </div>
+  <div class="icon badge-icon">
+    <i class="far fa-heart"></i>
+    <span class="badge">0</span>
+  </div>
+  <div class="icon badge-icon">
+    <i class="fas fa-shopping-bag"></i>
+    <span class="badge">0</span>
+  </div>
+</div>
+  </header>
+
+  <!-- Navigation Links -->
+  <nav class="nav-links" id="navMenu">
+    <ul>
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="../shop/shop.html">Shop</a></li>
+      <li><a href="about.html">About us</a></li>
+      <li><a href="../blog/blog.html">Blog</a></li>
+      <li><a href="#">Pages</a></li>
+      <li><a href="../contact/contact.html">Contact</a></li>
+
+    </ul>
+  </nav>
+
+
+<!-- Header Section -->
+<header class="about-header">
+  <div class="container">
+    <h1>about us</h1>
+    <p>Home • about us</p>
+  </div>
+</header>
+
+
+<section class="two-container-section">
+    <div class="content">
+      <h2 class="heading">Our story</h2>
+      <p class="description">
+        Welcome to Sanova – where passion meets innovation. Founded on the principles of quality, dedication, and trust, 
+        Sanova has been delivering exceptional products/services to our valued customers since 2000.
+      </p>
+
+      <p class="description-1">
+        Our journey began with a simple vision: to create a solution that not only meets needs but also exceeds expectations.
+      </p>
+
+    </div>
+    <div class="image-container">
+      <img src="../../assets/testimonial-1.webp" alt="Image" />
+    </div>
+  </section>
+
+   <!-- Looping Marquee Section -->
+ <div class="ticker-container">
+  <div class="ticker-track" id="ticker-track">
+    <!-- JS will inject spans here -->
+  </div>
+</div>
+
+<section class="two-container-section">
+  <div class="image-container">
+    <img src="../../assets/testimonial-3.webp" alt="Image" />
+  </div>
+  <div class="content">
+    <h2 class="heading">Who We Are ?</h2>
+    <p class="description">
+     Welcome to Sanova – where passion meets innovation. Founded on the principles of quality, 
+     dedication, and trust, Sanova has been delivering exceptional products/services to our valued customers since 2000.
+    </p>
+    <p class="description-1">
+      Our journey began with a simple vision: to create a solution that not only meets needs but also exceeds expectations.
+    </p>
+  </div>
+</section>
+
+<section id="features-section" class="features-section"></section>
+
+
+<section class="video-bg-section">
+  <!-- Modal for video -->
+  <div class="video-modal" id="videoModal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeBtn">&times;</span>
+      <iframe
+        id="videoFrame"
+        width="800"
+        height="450"
+        src=""
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+
+  <!-- Thumbnail with play icon -->
+  <div class="overlay-content" id="thumbnailWrapper">
+    <img src="../../assets/face.avif" alt="Video Thumbnail" class="foreground-image" />
+    <div class="play-icon" id="playBtn">▶️</div>
+  </div>
+
+  <!-- Background video iframe (hidden by default) -->
+  <div class="background-video" id="backgroundVideo" style="display:none;">
+    <iframe
+      src="https://www.youtube.com/embed/9no7Q4jYnsI?autoplay=1&mute=1&loop=1&playlist=9no7Q4jYnsI&controls=0&modestbranding=1&showinfo=0&rel=0"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      playsinline
+    ></iframe>
+  </div>
+</section>
+
+
+<!-- Team section -->
+ <section class="category-section">
+   <div class="heading-row">
+  <h2>Meet Our Teams</h2>
+ 
+  <div class="nav-buttons">
+    <button onclick="scrollLeft()">&lt;</button>
+      <button onclick="scrollRight()">&gt;</button>
+  </div>
+</div>
+<div id="category-container" class="category-row"></div>
+
+   </section>
+
+
+<!-- subscribe-section -->
+<section class="subscribe-section">
+  <div class="subscribe-content">
+    <h2>Subscribe to our emails</h2>
+    <form class="subscribe-form">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">→</button>
+    </form>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<!-- Main Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3 class="footer-heading toggle-title">Contact Info <span class="toggle-icon">+</span></h3>
+      <ul class="footer-list">
+        <li>Find a location nearest you.</li>
+        <li><strong>Hotline:</strong> (+00) 123 - 4568</li>
+        <li><strong>Address:</strong> 512 Howard Street #19 San Francisco, USA</li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3 class="footer-heading toggle-title">Quick Links <span class="toggle-icon">+</span></h3>
+      <ul class="footer-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Pages</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3 class="footer-heading toggle-title">Information <span class="toggle-icon">+</span></h3>
+      <ul class="footer-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Pages</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3 class="footer-heading toggle-title">Let’s Get In Touch <span class="toggle-icon">+</span></h3>
+      <p>Subscribe to our newsletter to receive news on update.</p>
+      <form class="footer-form">
+        <div class="input-wrapper">
+          <input type="email" placeholder="Enter your email" />
+          <button type="submit">→</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-line"></div>
+
+  <div class="footer-bottom">
+    <div class="logo">
+      <img src="../../assets/img-footer.webp" alt="Logo" />
+    </div>
+    <div class="copyright">©2025 Novana shopify theme</div>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-pinterest-p"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="about.js"></script>
+</body>
+</html>

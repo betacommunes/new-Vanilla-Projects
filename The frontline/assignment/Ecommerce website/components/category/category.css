@@ -13,7 +13,7 @@
   --color-shadow: rgba(0, 0, 0, 0.1);
 
   /* Spacing */
-  --padding-section: 60px 20px;
+  --padding-section: 60px 5%;
   --gap-grid: 25px;
   --margin-bottom-large: 20px;
   --margin-top-small: 10px;
@@ -165,16 +165,12 @@ body {
 }
 
 /* Basic Styling */
-body {
-  font-family: var(--font-family);
-  margin: 0;
-  padding: 0;
-}
+
 
 .gallery {
   display: flex;
   gap: var(--gap-container);
-  padding: 20px;
+  padding: 20px 5%;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -184,7 +180,6 @@ body {
   width: var(--image-width);
   height: var(--image-height);
   overflow: hidden;
-  border-radius: var(--card-border-radius);
   box-shadow: 0 0 6px var(--shadow-color);
 }
 

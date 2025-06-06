@@ -1,13 +1,13 @@
 const featuredSection = document.getElementById("featuredProducts");
 
 const products = [
-  { img: "pic2.jpg" },
-  { img: "pic3.jpg" },
-  { img: "pic4.jpg" },
-  { img: "pic2.jpg" },
-  { img: "pic5.jpg" },
-  { img: "pic6.jpg" },
-  { img: "pic3.jpg" }
+  { img: "../../assets/pic2.jpg" },
+  { img: "../../assets/pic3.jpg" },
+  { img: "../../assets/pic4.jpg" },
+  { img: "../../assets/pic2.jpg" },
+  { img: "../../assets/img5.jpg" },
+  { img: "../../assets/img6.jpg" },
+  { img: "../../assets/pic3.jpg" }
 ];
 
 products.forEach((product) => {
