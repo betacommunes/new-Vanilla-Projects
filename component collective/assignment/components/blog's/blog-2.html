@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazing Blog Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    :root {
+      --primary: #e64a1a;
+      --background: #f0f4f8;
+      --text: #1f2937;
+      --muted: #64748b;
+      --card-bg: #ffffff;
+      --border: #cbd5e1;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: var(--primary);
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .blog-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .blog-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .blog-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .blog-content {
+      padding: 20px;
+    }
+
+    .blog-content h3 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    .blog-content p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+
+    .blog-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .blog-meta i {
+      color: var(--primary);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🚀 Amazing Blog Zone</h1>
+    <p>Tech, Design, Life & Everything In Between</p>
+  </header>
+
+  <section class="blog-container">
+    <div class="blog-card">
+      <img src="asits/blog-img (5).jpg" alt="tech" />
+      <div class="blog-content">
+        <h3>Future of Web Development</h3>
+        <p>Explore the latest trends shaping how websites are built using AI and modern tools.</p>
+        <div class="blog-meta">
+          <i class="fa-solid fa-calendar-days"></i> May 2025
+          <i class="fa-solid fa-user"></i> Raja G
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <img src="asits/blog-img (1).jpg" alt="design" />
+      <div class="blog-content">
+        <h3>UI/UX That Actually Works</h3>
+        <p>Good design isn't just beauty—it's strategy. Learn the principles behind user delight.</p>
+        <div class="blog-meta">
+          <i class="fa-solid fa-calendar-days"></i> April 2025
+          <i class="fa-solid fa-user"></i> Sara
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <img src="asits/blog-img (2).jpg" alt="startup" />
+      <div class="blog-content">
+        <h3>Startup Life 101</h3>
+        <p>From idea to funding to MVP, here's what every founder should know before starting out.</p>
+        <div class="blog-meta">
+          <i class="fa-solid fa-calendar-days"></i> March 2025
+          <i class="fa-solid fa-user"></i> Bilal Ahmed
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <img src="asits/blog-img (3).jpg" alt="productivity" />
+      <div class="blog-content">
+        <h3>Work Smarter, Not Harder</h3>
+        <p>Simple habits that helped successful people achieve more with less stress.</p>
+        <div class="blog-meta">
+          <i class="fa-solid fa-calendar-days"></i> Feb 2025
+          <i class="fa-solid fa-user"></i> Ayesha Raza
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <img src="asits/blog-img (4).jpg" alt="freelancing" />
+      <div class="blog-content">
+        <h3>Freelancing: Your Road to Freedom</h3>
+        <p>Discover how you can build a successful freelance career from home with skills you already have.</p>
+        <div class="blog-meta">
+          <i class="fa-solid fa-calendar-days"></i> Jan 2025
+          <i class="fa-solid fa-user"></i> Hamza Khan
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Raja's Blog. Crafted with ❤️ to impress HR 😎
+  </footer>
+
+</body>
+</html>
